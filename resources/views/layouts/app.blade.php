@@ -167,7 +167,7 @@
                     <div class="row">
                       <div class="col-md-12">
                               <!--Contenido-->
-                            <h2> @yield('content') </h2>
+                             @yield('content') 
                               <!--Fin Contenido-->
                            </div>
                         </div>
