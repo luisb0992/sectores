@@ -16,7 +16,7 @@ class LoginController extends Controller
 	 }
 
 
-	 public function login()
+	 public function login(Request $request)
 	 {
 	 	/*----------- LOGIN MANUAL , MODIFICABLE ----------*/
 
@@ -36,7 +36,7 @@ class LoginController extends Controller
 	            
 	        }else{
 
-	        	return redirect()->route('index_show_login')->withErrors('An error has occurred, check your credentials');
+	        	return redirect()->route('index_show_login')->withErrors('¡Error! , Revise sus credenciales');
 	        }
 	 }
 

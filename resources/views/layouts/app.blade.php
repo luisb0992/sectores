@@ -87,8 +87,11 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     
-                    <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Cerrar</a>
+                   <div class="pull-right">
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        {{ csrf_field() }}
+                        <button class="btn btn-flat btn-default" type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i> Salir</button>
+                      </form>
                     </div>
                   </li>
                 </ul>

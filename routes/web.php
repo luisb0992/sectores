@@ -17,3 +17,11 @@ Route::get('/', function () {
 
 /* ---- Ruuta para llamar al dashboard , modificarla si es necesario ----- */
 Route::get('dashboard', 'LoginController@index');
+
+/* --- Usuarios ---*/
+Route::resource('/usuarios','UserController');
+
+
+/*---------- RUTAS DE LOGIN ----------------*/
+Route::post('auth', 'LoginController@login')->name('auth');
+Route::post('/logout', 'LoginController@logout')->name('logout');
