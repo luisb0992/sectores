@@ -14,12 +14,12 @@
 Route::get('/', function () {
     return view('login');
 });
-
-/* ---- Ruuta para llamar al dashboard , modificarla si es necesario ----- */
-Route::get('dashboard', 'LoginController@index');
-
-/* --- Usuarios ---*/
-Route::resource('/usuarios','UserController');
+Route::group(['middleware' => 'auth'], function() { //middleware auth
+    /* ---- Ruta para llamar al dashboard , modificarla si es necesario ----- */
+	Route::get('dashboard', 'LoginController@index');
+	/* --- Usuarios ---*/
+	Route::resource('/usuarios','UserController');
+});
 
 
 /*---------- RUTAS DE LOGIN ----------------*/
