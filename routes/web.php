@@ -21,7 +21,7 @@ Route::post('/logout', 'LoginController@logout')->name('logout');
 
 Route::group(['middleware' => 'auth'], function() { //middleware auth
   /* ---- Ruta para llamar al dashboard , modificarla si es necesario ----- */
-	Route::get('dashboard', 'LoginController@index');
+	Route::get('dashboard', 'LoginController@index')->name('dashboard');
 	/* --- Usuarios ---*/
 	Route::resource('/usuarios','UserController');
 });
