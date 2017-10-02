@@ -69,7 +69,7 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                   	<div class="pull-left">
-                  		<a href="#" class="btn btn-flat btn-default"><i class="fa fa-user-circle" aria-hidden="true"></i> Perfil</a>
+                  		<a href="{{route('perfil')}}" class="btn btn-flat btn-default"><i class="fa fa-user-circle" aria-hidden="true"></i> Perfil</a>
                   	</div>
                     
                    	<div class="pull-right">
@@ -93,6 +93,19 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MENÚ</li>
+
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span>Usuarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Ver usuarios</a></li>
+                <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-o"></i>Agregar usuario</a></li>
+              </ul>
+            </li>
+
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-laptop"></i>
@@ -104,7 +117,8 @@
                 <li><a href="#"><i class="fa fa-circle-o"></i> Item</a></li>
               </ul>
             </li>
-             <li>
+
+            <li>
               <a href="#">
                 <i class="fa fa-plus-square"></i> <span>Ayuda</span>
                 <small class="label pull-right bg-red">PDF</small>
@@ -157,7 +171,10 @@
 
       	//activar Datatable
         $('.data-table').DataTable({
-          responsive: true
+          responsive: true,
+          language: {
+          	url:'{{asset("plugins/datatables/spanish.json")}}'
+          }
         });
       })
     </script>

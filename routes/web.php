@@ -23,6 +23,8 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
   /* ---- Ruta para llamar al dashboard , modificarla si es necesario ----- */
 	Route::get('dashboard', 'LoginController@index')->name('dashboard');
 	/* --- Usuarios ---*/
-	Route::resource('/usuarios','UserController');
+	Route::resource('/users','UserController');
+	//* --- Perfil --- */
+	Route::get('/perfil', 'UserController@perfil')->name('perfil');
+	Route::patch('/perfil', 'UserController@update_perfil')->name('update_perfil');
 });
-
