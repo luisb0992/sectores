@@ -11,17 +11,18 @@
 |
 */
 
+/*---------- RUTAS DE LOGIN ----------------*/
 Route::get('/', function () {
-    return view('login');
-});
+  return view('login');
+})->name('login');
+Route::post('auth', 'LoginController@login')->name('auth');
+Route::post('/logout', 'LoginController@logout')->name('logout');
+
+
 Route::group(['middleware' => 'auth'], function() { //middleware auth
-    /* ---- Ruta para llamar al dashboard , modificarla si es necesario ----- */
+  /* ---- Ruta para llamar al dashboard , modificarla si es necesario ----- */
 	Route::get('dashboard', 'LoginController@index');
 	/* --- Usuarios ---*/
 	Route::resource('/usuarios','UserController');
 });
 
-
-/*---------- RUTAS DE LOGIN ----------------*/
-Route::post('auth', 'LoginController@login')->name('auth');
-Route::post('/logout', 'LoginController@logout')->name('logout');
