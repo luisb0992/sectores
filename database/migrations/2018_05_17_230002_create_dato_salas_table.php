@@ -13,8 +13,14 @@ class CreateDatoSalasTable extends Migration
      */
     public function up()
     {
-        Schema::create('dato_salas', function (Blueprint $table) {
+        Schema::create('datos_sala', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('hora_reporte')->nullable();
+            $table->string('hora_ejecucion')->nullable();
+            $table->string('sector')->nullable();
+            $table->string('municipio')->nullable();
+            $table->string('parroquia')->nullable();
+            $table->string('total');
             $table->timestamps();
         });
     }
@@ -26,6 +32,6 @@ class CreateDatoSalasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('dato_salas');
+        Schema::dropIfExists('datos_sala');
     }
 }

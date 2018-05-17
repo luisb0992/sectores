@@ -39,7 +39,7 @@
   </head>
   <!--<a class='flotante btn btn-flat btn-success' href='#' >Aquio</a>-->
 
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-red sidebar-mini">
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
@@ -49,7 +49,7 @@
           	<img class="img-responsive" src="{{ asset('img/logo.png') }}" alt="Logo" style="height:30px;margin:10px 0 0 10px">
           </span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>1xCalle</b></span>
+          <span class="logo-lg"><b>Sectores</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -102,39 +102,9 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MENÚ</li>
-      @if(Auth::user()->rol == 'A')
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-users"></i>
-                <span>Usuarios</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Ver usuarios</a></li>
-                <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-o"></i>Agregar usuario</a></li>
-              </ul>
-            </li>
-
             <li>
-              <a href="{{route('estructura.create')}}" id="borrar">
-                <i class="fa fa-plus-square"></i> <span>Limpiar BD</span>
-                <small class="label pull-right bg-red">Base De Datos</small>
-              </a>
-            </li> 
-
-            <li>
-              <a href="{{route('estructura.index')}}">
-                <i class="fa fa-print"></i> <span>Reportes</span>
-                <small class="label pull-right bg-red">PDF</small>
-              </a>
-            </li> 
-
-        @endif
-            <li>
-              <a href="{{route('estructura.create')}}">
-                <i class="fa fa-plus-square"></i> <span>1xCalle</span>
-                <small class="label pull-right bg-red">1xCalle</small>
+              <a href="{{ route('createData') }}">
+                <i class="fa fa-plus-square"></i> <span>Sectores</span>
               </a>
             </li>     
           </ul>
@@ -159,7 +129,7 @@
       </div><!-- /.content-wrapper -->
       <!--Fin-Contenido-->
       <footer class="main-footer">
-        <strong>Copyright &copy; 2016-2017 <a href="#">Comando PSUV C.A</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016-{{ date('Y') }} <a href="#">Comando PSUV C.A</a>.</strong> All rights reserved.
       </footer>
     </div><!-- .wrapper -->
     <!-- jQuery 2.1.4 -->
@@ -184,19 +154,6 @@
           language: {
           	url:'{{asset("plugins/datatables/spanish.json")}}'
           }
-        });
-
-        $("#borrar").click(function(event) {
-          //event.Preventdefault();
-          var txt;
-            var r = confirm("Press a button!");
-            if (r == true) {
-               $.get('{{route("borrar.base")}}', function(data) {
-                 alert("Borrado con exito")
-               });
-            } else {
-                alert("No va borrar")
-            }
         });
       })
     </script>

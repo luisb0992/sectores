@@ -28,11 +28,8 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::get('/perfil', 'UserController@perfil')->name('perfil');
 	Route::patch('/perfil', 'UserController@update_perfil')->name('update_perfil');
 
-	//estructura
-	Route::resource('/estructura','EstructuraController');
-	Route::get('/borrar','EstructuraController@deleteRow')->name('borrar.base');
-
-	Route::post('/comunidad','EstructuraController@comunidad')->name('comunidad.calle');
-	Route::post('/calles','EstructuraController@calles')->name('calles.registrar');
-	Route::post('/com','EstructuraController@comunidades')->name('comunidad.registrar');
+	// carga de data sectores sociales
+	Route::get('datasala','DataController@create')->name('createData');
+	Route::post('datasala','DataController@store')->name('cargaData');
+	Route::get('parro/{municipio}','DataController@parroquias');
 });
