@@ -20,15 +20,16 @@
     	<div class="col-md-12">
     		<h2 class="page-header" style="margin-top:0!important">
           <i class="fa fa-user" aria-hidden="true"></i>
-          {{ $user->name }}
+          {{ $user->nombres.' '.$user->apellido }}
           <small class="pull-right">Registrado: {{ $user->created_at }}</small>
           <span class="clearfix"></span>
         </h2>
     	</div>
 			<div class="col-md-4">
 				<h4>Detalles del Usuario</h4>
-				<p><b>Nombre: </b> {{$user->name}} </p>
-        <p><b>Email: </b> {{$user->email}} </p>
+				<p><b>Nombre: </b> {{$user->nombres.' '.$user->apellidos}} </p>
+        <p><b>Usuario: </b> {{$user->usuario}} </p>
+        <p><b>Parroquia: </b>{{$user->parroquia}}</p>
 			</div>
 		
 		</div>

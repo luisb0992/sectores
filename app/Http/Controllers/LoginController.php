@@ -16,11 +16,11 @@ class LoginController extends Controller
 	 {
 	 		/*----------- LOGIN MANUAL , MODIFICABLE ----------*/
     	$this->validate($request, [
-    		'email' =>'required|email',
+    		'usuario' =>'required',
     		'password' => 'required',
     	]);
 
-      if (Auth::attempt($request->only(['email','password']))){
+      if (Auth::attempt($request->only(['usuario','password']))){
       	return redirect()->intended('dashboard');
       }else{
       	return redirect()->route('login')->withErrors('¡Error! , Revise sus credenciales');

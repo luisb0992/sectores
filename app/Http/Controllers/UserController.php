@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Centros;
+use App\Comunidades;
 
 class UserController extends Controller
 {
@@ -16,7 +18,7 @@ class UserController extends Controller
      */
     public function index()
     {
-    	$users = User::all();
+    	$users = User::where('id','!=',1)->get();
     	return view('users.index',['users'=>$users]);
     }
 
@@ -27,7 +29,11 @@ class UserController extends Controller
      */
     public function create()
     {
-      return view("users.create");
+
+      $parroquias = Centros::parroquias();
+      
+      //dd($parroquias);
+      return view("users.create",['parroquias'=>$parroquias]);
     }
 
     /**
@@ -39,9 +45,10 @@ class UserController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, [
-        'name' => 'required',
-        'email' =>'required|email|unique:users',
-        'password' => 'required|min:6|confirmed'
+        'nombres' => 'required',
+        'usuario' =>'required|min:5|unique:users',
+        'password' => 'required|min:6|confirmed',
+        'usuario' => 'required|unique:users'
       ]);
 
       $user = new User;
@@ -83,7 +90,10 @@ class UserController extends Controller
     public function edit($id)
     {
       $user = user::findOrFail($id);
-      return view("users.edit", ["user" => $user]);
+
+       $parroquias = Centros::parroquias();
+
+      return view("users.edit", ["user" => $user,"parroquias"=>$parroquias]);
     }
 
     /**
@@ -98,8 +108,8 @@ class UserController extends Controller
       $user = User::findOrFail($id);
 
       $this->validate($request, [
-        'name' => 'required',
-        'email' =>'required|email|unique:users,email,'.$user->id.',id'
+        'nombres' => 'required',
+        'usuario' =>'required|unique:users,usuario,'.$user->id.',id'
       ]);
 
       $user->fill($request->all());

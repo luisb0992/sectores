@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/AdminLTE.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/glyphicons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/datatables/dataTables.bootstrap.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/select2.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
@@ -27,8 +28,17 @@
 			  padding: 20px;
 			  margin: 10px 25px;
 			}
+
+      .flotante {
+    display:scroll;
+        position:fixed;
+        bottom:320px;
+        right:0px;
+}
 	  </style>
   </head>
+  <!--<a class='flotante btn btn-flat btn-success' href='#' >Aquio</a>-->
+
   <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
       <header class="main-header">
@@ -36,10 +46,10 @@
         <a href="{{route('dashboard')}}" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini">
-          	<img class="img-responsive" src="{{ asset('img/logo_blanco.png') }}" alt="Logo" style="height:30px;margin:10px 0 0 10px">
+          	<img class="img-responsive" src="{{ asset('img/logo.png') }}" alt="Logo" style="height:30px;margin:10px 0 0 10px">
           </span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>PROJECT 4 DESIGN</b></span>
+          <span class="logo-lg"><b>1xCalle</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -55,13 +65,13 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <span class="hidden-xs">{{ Auth::user()->email }}</span>
+                  <span class="hidden-xs">{{ Auth::user()->usuario }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
                     <p>
-                      DESCRIPCCION
+                      {{ Auth::user()->parroquia }}
                       <small>LEYENDA DEL USUARIO ONLINE</small>
                     </p>
                   </li>
@@ -93,7 +103,7 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MENÚ</li>
-
+      @if(Auth::user()->rol == 'A')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i>
@@ -106,30 +116,27 @@
               </ul>
             </li>
 
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-laptop"></i>
-                <span>MENU DESPLEGABLE</span>
-                <i class="fa fa-angle-left pull-right"></i>
+            <li>
+              <a href="{{route('estructura.create')}}" id="borrar">
+                <i class="fa fa-plus-square"></i> <span>Limpiar BD</span>
+                <small class="label pull-right bg-red">Base De Datos</small>
               </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Item</a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i> Item</a></li>
-              </ul>
-            </li>
+            </li> 
 
             <li>
-              <a href="#">
-                <i class="fa fa-plus-square"></i> <span>Ayuda</span>
+              <a href="{{route('estructura.index')}}">
+                <i class="fa fa-print"></i> <span>Reportes</span>
                 <small class="label pull-right bg-red">PDF</small>
               </a>
-            </li>
+            </li> 
+
+        @endif
             <li>
-              <a href="#">
-                <i class="fa fa-info-circle"></i> <span>Acerca De...</span>
-                <small class="label pull-right bg-yellow">IT</small>
+              <a href="{{route('estructura.create')}}">
+                <i class="fa fa-plus-square"></i> <span>1xCalle</span>
+                <small class="label pull-right bg-red">1xCalle</small>
               </a>
-            </li>       
+            </li>     
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -152,7 +159,7 @@
       </div><!-- /.content-wrapper -->
       <!--Fin-Contenido-->
       <footer class="main-footer">
-        <strong>Copyright &copy; 2016-2017 <a href="http://www.project4design.com">Project 4 Design C.A</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016-2017 <a href="#">Comando PSUV C.A</a>.</strong> All rights reserved.
       </footer>
     </div><!-- .wrapper -->
     <!-- jQuery 2.1.4 -->
@@ -164,6 +171,8 @@
     <!-- Data table -->
     <script type="text/javascript" src="{{asset('plugins/datatables/jquery.dataTables.min.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/datatables/dataTables.bootstrap.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/select2.full.js')}}"></script>
+    <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
     <script type="text/javascript">
       $(document).ready(function(){
       	//Eliminar alertas que no contengan la clase alert-important luego de 7seg
@@ -175,6 +184,19 @@
           language: {
           	url:'{{asset("plugins/datatables/spanish.json")}}'
           }
+        });
+
+        $("#borrar").click(function(event) {
+          //event.Preventdefault();
+          var txt;
+            var r = confirm("Press a button!");
+            if (r == true) {
+               $.get('{{route("borrar.base")}}', function(data) {
+                 alert("Borrado con exito")
+               });
+            } else {
+                alert("No va borrar")
+            }
         });
       })
     </script>

@@ -10,47 +10,78 @@
 @endsection
 @section('content')
 		<!-- Formulario -->
-		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
-				<form class="" action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
-					{{ method_field( 'POST' ) }}
-					{{ csrf_field() }}
-					<h4>Agregar Usuario</h4>
-					<div class="form-group {{ $errors->has('name')?'has-error':'' }}">
-						<label class="control-label" for="name">nombre: *</label>
-						<input id="name" class="form-control" type="text" name="name" value="{{ old('name')?old('name'):'' }}" placeholder="Nombre" required>
-					</div>
+		
+
+		<div class="box box-danger">
+	      <div class="box-header with-border">
+	        <h3 class="box-title"><i class="fa fa-users"></i> Usuarios</h3>
+	        <span class="pull-right">
 					
-					<div class="form-group {{ $errors->has('email')?'has-error':'' }}">
-						<label class="control-label" for="email">Email: *</label>
-						<input id="email" class="form-control" type="mail" name="email" value="{{ old('email')?old('email'):'' }}" placeholder="Email" required>
-					</div>
+					</span>
+	      </div>
+      	<div class="box-body">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3">
+					<form class="" action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
+						{{ method_field( 'POST' ) }}
+						{{ csrf_field() }}
+						<h4>Agregar Usuario</h4>
+						<div class="form-group {{ $errors->has('cedula')?'has-error':'' }}">
+							<label class="control-label" for="cedula">Cedula: *</label>
+							<input id="cedula" class="form-control" type="text" name="cedula" value="{{ old('cedula')?old('cedula'):'' }}" placeholder="Cedula" required>
+						</div>
 
-					<div class="form-group {{ $errors->has('password')?'has-error':'' }}">
-						<label class="control-label" for="password">Contraseña: *</label>
-						<input id="password" class="form-control" type="password" name="password" required>
-					</div>
+						<div class="form-group {{ $errors->has('name')?'has-error':'' }}">
+							<label class="control-label" for="name">Nombres: *</label>
+							<input id="name" class="form-control" type="text" name="nombres" value="{{ old('nombres')?old('nombres'):'' }}" placeholder="Nombre" required>
+						</div>
 
-					<div class="form-group {{ $errors->has('password_confirmation')?'has-error':'' }}">
-						<label class="control-label" for="password_confirmation">Verificar: *</label>
-						<input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required>
-					</div>
+						<div class="form-group {{ $errors->has('apellido')?'has-error':'' }}">
+							<label class="control-label" for="apellido">Apellidos: *</label>
+							<input id="apellido" class="form-control" type="text" name="apellidos" value="{{ old('apellidos')?old('apellidos'):'' }}" placeholder="Apellido" required>
+						</div>
+						
+						<div class="form-group {{ $errors->has('usuario')?'has-error':'' }}">
+							<label class="control-label" for="usuario">Usuario: *</label>
+							<input id="email" class="form-control" type="mail" name="usuario" value="{{ old('usuario')?old('usuario'):'' }}" placeholder="Usuario" required>
+						</div>
 
-					@if (count($errors) > 0)
-	          <div class="alert alert-danger alert-important">
-		          <ul>
-		            @foreach($errors->all() as $error)
-		              <li>{{$error}}</li>
-		            @endforeach
-		          </ul>  
-	          </div>
-	        @endif
+						<div class="form-group {{ $errors->has('email')?'has-error':'' }}">
+							<label class="control-label" for="email">Parroquias: *</label>
+							<select class="form-control" name="parroquia">
+								<option value="">Seleccione...</option>
+								@foreach($parroquias as $p)
+									<option value="{{$p->PARROQUIA}}">{{$p->PARROQUIA}}</option>
+								@endforeach
+							</select>
+						</div>
 
-					<div class="form-group text-right">
-						<a class="btn btn-flat btn-default" href="{{route('users.index')}}"><i class="fa fa-reply"></i> Atras</a>
-						<button class="btn btn-flat btn-primary" type="submit"><i class="fa fa-send"></i> Guardar</button>
-					</div>
-				</form>
-			</div>
+						<div class="form-group {{ $errors->has('password')?'has-error':'' }}">
+							<label class="control-label" for="password">Contraseña: *</label>
+							<input id="password" class="form-control" type="password" name="password" required>
+						</div>
+
+						<div class="form-group {{ $errors->has('password_confirmation')?'has-error':'' }}">
+							<label class="control-label" for="password_confirmation">Verificar: *</label>
+							<input id="password_confirmation" class="form-control" type="password" name="password_confirmation" required>
+						</div>
+
+						@if (count($errors) > 0)
+		          <div class="alert alert-danger alert-important">
+			          <ul>
+			            @foreach($errors->all() as $error)
+			              <li>{{$error}}</li>
+			            @endforeach
+			          </ul>  
+		          </div>
+		        @endif
+
+						<div class="form-group text-right">
+							<a class="btn btn-flat btn-default" href="{{route('users.index')}}"><i class="fa fa-reply"></i> Atras</a>
+							<button class="btn btn-flat btn-primary" type="submit"><i class="fa fa-send"></i> Guardar</button>
+						</div>
+					</form>
+				</div>
 		</div>
+	</div>
 @endsection
