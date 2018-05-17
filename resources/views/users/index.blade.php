@@ -53,7 +53,7 @@
 									<td>{{$d->cedula}}</td>
 									<td>{{$d->nombres.' '.$d->apellidos}}</td>
 									<td>{{$d->usuario}}</td>
-									<td>{{$d->sector}}</td>
+									<td>{{$d->sector->SECTORES_SOCIALES}}</td>
 									<td>
 										<a class="btn btn-primary btn-flat btn-sm" href="{{ route('users.show',[$d->id])}}"><i class="fa fa-search"></i></a>
 										<a href="{{route('users.edit',[$d->id])}}" class="btn btn-flat btn-success btn-sm" title="Editar"><i class="fa fa-edit"></i></a>

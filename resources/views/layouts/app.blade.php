@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/glyphicons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/datatables/dataTables.bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/select2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/highcharts.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
@@ -104,7 +105,7 @@
           <ul class="sidebar-menu">
             <li class="treeview">
               <a href="#">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-users"></i>
                 <span>Usuarios</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
@@ -118,11 +119,24 @@
               </ul>
             </li>
 
+
+            
+            <li>
+              <a href="{{route('lineas.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
+              </a>
+            </li>
+
+             <li>
+              <a href="{{route('sectores.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
+              </a>
+            </li>
             <li>
               <a href="{{ route('createData') }}">
                 <i class="fa fa-plus-square"></i> <span>Sectores</span>
               </a>
-            </li>     
+            </li>       
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -159,6 +173,10 @@
     <script type="text/javascript" src="{{asset('plugins/datatables/dataTables.bootstrap.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/select2.full.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
+    <script type="text/javascript" src="{{asset('plugins/highcharts/highcharts.js')}}"></script>
+    <script type="text/javascript" src="{{asset('plugins/highcharts/exporting.js')}}"></script>
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://code.highcharts.com/js/highcharts-more.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
       	//Eliminar alertas que no contengan la clase alert-important luego de 7seg

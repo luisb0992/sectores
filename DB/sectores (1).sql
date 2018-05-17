@@ -1,0 +1,1001 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.9
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 18-05-2018 a las 01:30:43
+-- Versión del servidor: 10.1.31-MariaDB
+-- Versión de PHP: 7.2.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `sectores`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `centro`
+--
+
+CREATE TABLE `centro` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `cod` int(11) NOT NULL,
+  `centro` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `municipio` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `parroquia` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `direccion` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mesas` int(11) NOT NULL,
+  `electores` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `centro`
+--
+
+INSERT INTO `centro` (`id`, `cod`, `centro`, `municipio`, `parroquia`, `direccion`, `mesas`, `electores`, `created_at`, `updated_at`) VALUES
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. CHORONI', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. CHORONI', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. CHORONI', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOAQUIN CRESPO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. PEDRO JOSE OVALLES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. JOSE CASANOVA GODOY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. ANDRES ELOY BLANCO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LOS TACARIGUAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'CM. TURMERO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. SAMAN DE GUERE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. ALFREDO PACHECO M', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. CHUAO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. CHUAO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTIAGO MARIÑO', 'PQ. AREVALO APONTE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. ZUATA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. PAO DE ZARATE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. LAS GUACAMAYAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. LAS GUACAMAYAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. VALLE MORIN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. VALLE MORIN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. GUIRIPA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. GUIRIPA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. GUIRIPA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. OLLAS DE CARAMACATE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. OLLAS DE CARAMACATE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'PQ. OLLAS DE CARAMACATE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'CM. CAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'PQ. BELLA VISTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'PQ. BELLA VISTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'PQ. BELLA VISTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SUCRE', 'PQ. BELLA VISTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'CM. BARBACOAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. SAN FRANCISCO DE CARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. SAN FRANCISCO DE CARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. TAGUAY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. TAGUAY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. TAGUAY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. TAGUAY', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. LAS PEÑITAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. LAS PEÑITAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. URDANETA', 'PQ. LAS PEÑITAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'CM. VILLA DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. MAGDALENO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. SAN FRANCISCO DE ASIS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. VALLES DE TUCUTUNEMO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. VALLES DE TUCUTUNEMO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. VALLES DE TUCUTUNEMO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. PQ AUGUSTO MIJARES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. PQ AUGUSTO MIJARES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. PQ AUGUSTO MIJARES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. PQ AUGUSTO MIJARES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. ZAMORA', 'PQ. PQ AUGUSTO MIJARES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'CM. PALO NEGRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. LIBERTADOR', 'PQ. SAN MARTIN DE PORRES', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. BOLIVAR', 'CM. SAN MATEO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'CM. LAS TEJERIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'PQ. TIARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'PQ. TIARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'PQ. TIARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'PQ. TIARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SANTOS MICHELENA', 'PQ. TIARA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'PQ. CAÑA DE AZUCAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'CM. CAMATAGUA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'PQ. CARMEN DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'PQ. CARMEN DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. CAMATAGUA', 'PQ. CARMEN DE CURA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. FRANCISCO DE MIRANDA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. MONS FELICIANO G', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. MONS FELICIANO G', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. MONS FELICIANO G', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. MONS FELICIANO G', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'PQ. MONS FELICIANO G', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.OCUMARE D L COSTA', 'PQ. OCUMARE DE LA COSTA', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. LAS DELICIAS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. GIRARDOT', 'PQ. MADRE MA DE SAN JOSE', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'CM. JUAN VICENTE BOLIVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. JOSE FELIX RIBAS', 'PQ. CASTOR NIEVES RIOS', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN CASIMIRO', 'CM. SAN CASIMIRO', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. SAN SEBASTIAN', 'CM. SAN SEBASTIAN', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. MARIO B IRAGORRY', 'CM. EL LIMON', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP. TOVAR', 'CM. COLONIA TOVAR', '', 0, 0, NULL, NULL),
+(0, 0, '', 'MP.FRANCISCO LINARES', 'CM. SANTA RITA', '', 0, 0, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `centros`
+--
+
+CREATE TABLE `centros` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datos_sala`
+--
+
+CREATE TABLE `datos_sala` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `hora_reporte` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hora_ejecucion` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sector_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `municipio` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `parroquia` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `total` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `datos_sala`
+--
+
+INSERT INTO `datos_sala` (`id`, `hora_reporte`, `hora_ejecucion`, `sector_id`, `municipio`, `parroquia`, `total`, `created_at`, `updated_at`) VALUES
+(1, '7:00 A:M', '22:05 pm', '1', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '1500', '2018-05-18 03:23:39', '2018-05-18 03:23:39'),
+(2, '12:00 P:M', '22:05 pm', '1', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '800', '2018-05-18 03:23:55', '2018-05-18 03:23:55');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `metas_sectores`
+--
+
+CREATE TABLE `metas_sectores` (
+  `Id` int(11) DEFAULT NULL,
+  `SECTORES_SOCIALES` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
+  `META ELECTORAL` double DEFAULT NULL,
+  `COMANDOS RECIBIDOS` double DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `metas_sectores`
+--
+
+INSERT INTO `metas_sectores` (`Id`, `SECTORES_SOCIALES`, `META ELECTORAL`, `COMANDOS RECIBIDOS`) VALUES
+(1, 'SALUD', 18760, 312),
+(2, 'VIVIENDA Y POBLADORES', 11475, 191),
+(3, 'EDUCACIÓN', 53210, 886),
+(4, 'HOGARES DE LA PATRIA ', 43789, 729),
+(5, 'FRENTE DE MUEJERES ', 16420, 273),
+(6, 'CHAMBA JUVENIL', 19476, 324),
+(7, 'TRANSPORTE', 9651, 160),
+(8, 'FRENTE DE DISCAPACIDAD ', 3214, 53),
+(9, 'ADULTO MAYOR', 31476, 524),
+(10, 'FRENTE MOTORIZADO', 1842, 30),
+(11, 'PLAN MURALES', 326, 5),
+(12, 'FRENTE FRANCISCO DE MIRANDA', 12470, 207),
+(13, 'ROBERT SERRA ', 9621, 160),
+(14, 'TRABAJADORES ', 16547, 275),
+(15, 'CONSEJOS COMUNALES ', 41597, 693),
+(16, 'FRENTE CAMPESINOS Y PESCADORES ', 1324, 22),
+(17, 'FRENTE DE REFUGIADOS ', 3841, 64),
+(18, 'FRENTE INDIGENAS ', 930, 15),
+(19, 'ESTUDIANTES UNIVERSITARIOS ', 27132, 452),
+(20, 'ECOSOCIALISTA ', 954, 15),
+(21, 'ABOGADOS', 1465, 24),
+(22, 'ECONOMIA SOCIAL', 3820, 63),
+(23, 'GLORIA DEL DEPORTE', 4398, 73),
+(24, 'INSTITUCIONES ', 13914, 139);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(15, '2018_05_17_233559_create_centros_table', 1),
+(19, '2014_10_12_000000_create_users_table', 2),
+(20, '2014_10_12_100000_create_password_resets_table', 2),
+(21, '2018_05_17_230002_create_dato_salas_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ss`
+--
+
+CREATE TABLE `ss` (
+  `Id` int(11) DEFAULT NULL,
+  `SECTORES_SOCIALES` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `ss`
+--
+
+INSERT INTO `ss` (`Id`, `SECTORES_SOCIALES`) VALUES
+(1, 'SALUD'),
+(2, 'VIVIENDA Y POBLADORES'),
+(3, 'EDUCACIÓN'),
+(4, 'HOGARES DE LA PATRIA '),
+(5, 'FRENTE DE MUEJERES '),
+(6, 'CHAMBA JUVENIL'),
+(7, 'TRANSPORTE'),
+(8, 'FRENTE DE DISCAPACIDAD '),
+(9, 'ADULTO MAYOR'),
+(10, 'FRENTE MOTORIZADO'),
+(11, 'PLAN MURALES'),
+(12, 'FRENTE FRANCISCO DE MIRANDA'),
+(13, 'ROBERT SERRA '),
+(14, 'TRABAJADORES '),
+(15, 'CONSEJOS COMUNALES '),
+(16, 'FRENTE CAMPESINOS Y PESCADORES '),
+(17, 'FRENTE DE REFUGIADOS '),
+(18, 'FRENTE INDIGENAS '),
+(19, 'ESTUDIANTES UNIVERSITARIOS '),
+(20, 'ECOSOCIALISTA '),
+(21, 'ABOGADOS'),
+(22, 'ECONOMIA SOCIAL'),
+(23, 'GLORIA DEL DEPORTE'),
+(24, 'INSTITUCIONES '),
+(NULL, 'SALUD'),
+(NULL, 'VIVIENDA Y POBLADORES'),
+(NULL, 'EDUCACIÓN'),
+(NULL, 'HOGARES DE LA PATRIA '),
+(NULL, 'FRENTE DE MUEJERES '),
+(NULL, 'CHAMBA JUVENIL'),
+(NULL, 'TRANSPORTE'),
+(NULL, 'FRENTE DE DISCAPACIDAD '),
+(NULL, 'ADULTO MAYOR'),
+(NULL, 'FRENTE MOTORIZADO'),
+(NULL, 'PLAN MURALES'),
+(NULL, 'FRENTE FRANCISCO DE MIRANDA'),
+(NULL, 'ROBERT SERRA '),
+(NULL, 'TRABAJADORES '),
+(NULL, 'CONSEJOS COMUNALES '),
+(NULL, 'FRENTE CAMPESINOS Y PESCADORES '),
+(NULL, 'FRENTE DE REFUGIADOS '),
+(NULL, 'FRENTE INDIGENAS '),
+(NULL, 'ESTUDIANTES UNIVERSITARIOS '),
+(NULL, 'ECOSOCIALISTA '),
+(NULL, 'ABOGADOS'),
+(NULL, 'ECONOMIA SOCIAL'),
+(NULL, 'GLORIA DEL DEPORTE'),
+(NULL, 'INSTITUCIONES '),
+(NULL, 'SALUD'),
+(NULL, 'VIVIENDA Y POBLADORES'),
+(NULL, 'EDUCACIÓN'),
+(NULL, 'HOGARES DE LA PATRIA '),
+(NULL, 'FRENTE DE MUEJERES '),
+(NULL, 'CHAMBA JUVENIL'),
+(NULL, 'TRANSPORTE'),
+(NULL, 'FRENTE DE DISCAPACIDAD '),
+(NULL, 'ADULTO MAYOR'),
+(NULL, 'FRENTE MOTORIZADO'),
+(NULL, 'PLAN MURALES'),
+(NULL, 'FRENTE FRANCISCO DE MIRANDA'),
+(NULL, 'ROBERT SERRA '),
+(NULL, 'TRABAJADORES '),
+(NULL, 'CONSEJOS COMUNALES '),
+(NULL, 'FRENTE CAMPESINOS Y PESCADORES '),
+(NULL, 'FRENTE DE REFUGIADOS '),
+(NULL, 'FRENTE INDIGENAS '),
+(NULL, 'ESTUDIANTES UNIVERSITARIOS '),
+(NULL, 'ECOSOCIALISTA '),
+(NULL, 'ABOGADOS'),
+(NULL, 'ECONOMIA SOCIAL'),
+(NULL, 'GLORIA DEL DEPORTE'),
+(NULL, 'INSTITUCIONES ');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `cedula` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nombres` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `apellidos` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `usuario` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sector_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rol` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'U',
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `cedula`, `nombres`, `apellidos`, `usuario`, `password`, `sector_id`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', NULL, '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
+(4, '20990397', 'francisco', 'hernandez', 'francisco', '$2y$10$WdCMFM6XjMZNp4jdHwY3tukMAjVeaPO7Wh3uekan124JEpc.SvqEa', NULL, 'U', NULL, '2018-05-18 03:19:27', '2018-05-18 03:19:27');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `centros`
+--
+ALTER TABLE `centros`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `datos_sala`
+--
+ALTER TABLE `datos_sala`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_usuario_unique` (`usuario`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `centros`
+--
+ALTER TABLE `centros`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `datos_sala`
+--
+ALTER TABLE `datos_sala`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

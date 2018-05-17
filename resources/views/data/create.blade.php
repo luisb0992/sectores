@@ -54,7 +54,8 @@
 
 						<div class="form-group">
 							<label class="control-label" for="sector">Sector Social: </label>
-							<input type="text" name="sector" value="{{ $sector->SECTORES_SOCIALES }}" readonly="" class="form-control">
+							<input type="hidden" name="sector_id" value="{{ $sector->Id }}" readonly="" class="form-control">
+							<input type="text" value="{{ $sector->SECTORES_SOCIALES }}" readonly="" class="form-control">
 						</div>
 
 						<div class="form-group">

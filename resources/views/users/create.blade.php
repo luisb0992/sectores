@@ -45,10 +45,10 @@
 
 						<div class="form-group {{ $errors->has('email')?'has-error':'' }}">
 							<label class="control-label" for="email">Sector: *</label>
-							<select class="form-control" name="sector">
+							<select class="form-control" name="sector_id">
 								<option value="">Seleccione...</option>
 								@foreach($sectores as $p)
-									<option value="{{$p->SECTORES_SOCIALES}}">{{$p->SECTORES_SOCIALES}}</option>
+									<option value="{{ $p->Id }}">{{ $p->SECTORES_SOCIALES }}</option>
 								@endforeach
 							</select>
 						</div>

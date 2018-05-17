@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Centro;
 use App\Sector;
+use App\SS;
 
 class UserController extends Controller
 {
@@ -30,7 +31,7 @@ class UserController extends Controller
     public function create()
     {
 
-      $sectores = Sector::all();
+      $sectores = SS::all();
       
       //dd($sectores);
       return view("users.create",[

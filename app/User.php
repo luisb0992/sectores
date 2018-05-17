@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'nombres', 'apellidos', 'usuario', 'sector', 'cedula', 'rol'
+        'nombres', 'apellidos', 'usuario', 'sector_id', 'cedula', 'rol'
     ];
 
     /**
@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function sector(){
+        return $this->belongsTo('App\SS', 'sector_id');
+    }
 }

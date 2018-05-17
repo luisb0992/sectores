@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
           'nombres'   => 'Admin',
           'apellidos' => 'Admin',
           'usuario'     => 'admin',
+          'sector_id'     => 1,
           'password'  => bcrypt('admin123456')
         ]);
     }

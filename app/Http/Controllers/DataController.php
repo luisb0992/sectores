@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\DatoSala;
 use App\Centro;
 use App\Sector;
+use App\SS;
 
 class DataController extends Controller
 {
@@ -26,7 +27,13 @@ class DataController extends Controller
      */
     public function create()
     {
-        $sector = Sector::where('SECTORES_SOCIALES', \Auth::user()->sector)->first();
+        // $sector1 = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
+
+        $sector = \DB::table('ss')
+                    ->join('users', 'ss.id', '=' , 'users.sector_id')
+                    ->select('ss.*')
+                    ->where('users.sector_id', \Auth::user()->sector_id)
+                    ->first();
 
         return view('data.create',[
             'centro' => Centro::groupBy('municipio')->get(),
