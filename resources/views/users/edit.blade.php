@@ -45,24 +45,24 @@
 						</div>
 
 						<div class="form-group {{ $errors->has('email')?'has-error':'' }}">
-							<label class="control-label" for="email">Parroquias: *</label>
+							<label class="control-label" for="email">Sectores: *</label>
 							<select class="form-control" name="parroquia">
 								<option value="">Seleccione...</option>
-								@foreach($parroquias as $p)
-									<option value="{{$p->PARROQUIA}}">{{$p->PARROQUIA}}</option>
+								@foreach($sectores as $p)
+									<option value="{{$p->SECTORES_SOCIALES}}">{{$p->SECTORES_SOCIALES}}</option>
 								@endforeach
 							</select>
 						</div>
 
 						@if (count($errors) > 0)
-		          <div class="alert alert-danger alert-important">
-			          <ul>
-			            @foreach($errors->all() as $error)
-			              <li>{{$error}}</li>
-			            @endforeach
-			          </ul>  
-		          </div>
-		        @endif
+				          <div class="alert alert-danger alert-important">
+					          <ul>
+					            @foreach($errors->all() as $error)
+					              <li>{{$error}}</li>
+					            @endforeach
+					          </ul>  
+				          </div>
+				        @endif
 
 						<div class="form-group text-right">
 							<a class="btn btn-flat btn-default" href="{{route('users.index')}}"><i class="fa fa-reply"></i> Atras</a>

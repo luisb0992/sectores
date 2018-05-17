@@ -26,9 +26,11 @@ class DataController extends Controller
      */
     public function create()
     {
+        $sector = Sector::where('SECTORES_SOCIALES', \Auth::user()->sector)->first();
+
         return view('data.create',[
             'centro' => Centro::groupBy('municipio')->get(),
-            'sectores' => Sector::all()
+            'sector' => $sector
         ]);
     }
 
