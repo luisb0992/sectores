@@ -30,10 +30,11 @@ class DataController extends Controller
         // $sector1 = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
 
         $sector = \DB::table('ss')
-                    ->join('users', 'ss.id', '=' , 'users.sector_id')
+                    ->join('users', 'ss.Id', '=' , 'users.sector_id')
                     ->select('ss.*')
                     ->where('users.sector_id', \Auth::user()->sector_id)
                     ->first();
+        // dd($sector);
 
         return view('data.create',[
             'centro' => Centro::groupBy('municipio')->get(),

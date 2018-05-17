@@ -26,7 +26,7 @@ Highcharts.chart('container', {
     },
     xAxis: {
         
-          categories: [<?php    echo "'" . implode(",", $hora) . "'"; ?>,]
+          categories: []
     },
     yAxis: {
         title: {

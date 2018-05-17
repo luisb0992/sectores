@@ -48,7 +48,9 @@
 							<select class="form-control" name="sector_id">
 								<option value="">Seleccione...</option>
 								@foreach($sectores as $p)
-									<option value="{{ $p->Id }}">{{ $p->SECTORES_SOCIALES }}</option>
+									<option value="{{ $p->Id }}">
+										{{ $p->SECTORES_SOCIALES }}
+									</option>
 								@endforeach
 							</select>
 						</div>
