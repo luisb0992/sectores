@@ -103,7 +103,6 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-<<<<<<< HEAD
             <li class="header">MENÚ</li>
             <li class="treeview">
               <a href="#">
@@ -127,11 +126,9 @@
              <li>
               <a href="{{route('sectores.grafico')}}">
                 <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
-=======
             <li>
               <a href="{{ route('createData') }}">
                 <i class="fa fa-plus-square"></i> <span>Sectores</span>
->>>>>>> 76642aca16ff8ef55aa9eb6b788cef5c4bba77cf
               </a>
             </li>       
           </ul>
