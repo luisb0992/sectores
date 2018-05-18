@@ -35,4 +35,6 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::post('/comunidad','EstructuraController@comunidad')->name('comunidad.calle');
 	Route::post('/calles','EstructuraController@calles')->name('calles.registrar');
 	Route::post('/com','EstructuraController@comunidades')->name('comunidad.registrar');
+	Route::get('/lineas','GraficosController@lineas')->name('lineas.grafico');
+	Route::get('/sectoresGraficos','GraficosController@sectores')->name('sectores.grafico');
 });

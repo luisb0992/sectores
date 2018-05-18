@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset('css/glyphicons.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('plugins/datatables/dataTables.bootstrap.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/select2.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/highcharts.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="{{asset('css/_all-skins.min.css')}}">
@@ -103,7 +104,6 @@
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
             <li class="header">MENÚ</li>
-      @if(Auth::user()->rol == 'A')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i>
@@ -116,27 +116,18 @@
               </ul>
             </li>
 
+            
             <li>
-              <a href="{{route('estructura.create')}}" id="borrar">
-                <i class="fa fa-plus-square"></i> <span>Limpiar BD</span>
-                <small class="label pull-right bg-red">Base De Datos</small>
+              <a href="{{route('lineas.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
               </a>
-            </li> 
+            </li>
 
-            <li>
-              <a href="{{route('estructura.index')}}">
-                <i class="fa fa-print"></i> <span>Reportes</span>
-                <small class="label pull-right bg-red">PDF</small>
+             <li>
+              <a href="{{route('sectores.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
               </a>
-            </li> 
-
-        @endif
-            <li>
-              <a href="{{route('estructura.create')}}">
-                <i class="fa fa-plus-square"></i> <span>1xCalle</span>
-                <small class="label pull-right bg-red">1xCalle</small>
-              </a>
-            </li>     
+            </li>       
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -173,6 +164,10 @@
     <script type="text/javascript" src="{{asset('plugins/datatables/dataTables.bootstrap.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/select2.full.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
+    <script type="text/javascript" src="{{asset('plugins/highcharts/highcharts.js')}}"></script>
+    <script type="text/javascript" src="{{asset('plugins/highcharts/exporting.js')}}"></script>
+    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script src="https://code.highcharts.com/js/highcharts-more.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
       	//Eliminar alertas que no contengan la clase alert-important luego de 7seg
