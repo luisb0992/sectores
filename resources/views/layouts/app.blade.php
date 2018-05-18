@@ -40,7 +40,7 @@
   </head>
   <!--<a class='flotante btn btn-flat btn-success' href='#' >Aquio</a>-->
 
-  <body class="hold-transition skin-blue sidebar-mini">
+  <body class="hold-transition skin-red sidebar-mini">
     <div class="wrapper">
       <header class="main-header">
         <!-- Logo -->
@@ -50,7 +50,7 @@
           	<img class="img-responsive" src="{{ asset('img/logo.png') }}" alt="Logo" style="height:30px;margin:10px 0 0 10px">
           </span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>1xCalle</b></span>
+          <span class="logo-lg"><b>Sectores</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->
@@ -103,6 +103,7 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
+<<<<<<< HEAD
             <li class="header">MENÚ</li>
             <li class="treeview">
               <a href="#">
@@ -126,6 +127,11 @@
              <li>
               <a href="{{route('sectores.grafico')}}">
                 <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
+=======
+            <li>
+              <a href="{{ route('createData') }}">
+                <i class="fa fa-plus-square"></i> <span>Sectores</span>
+>>>>>>> 76642aca16ff8ef55aa9eb6b788cef5c4bba77cf
               </a>
             </li>       
           </ul>
@@ -150,7 +156,7 @@
       </div><!-- /.content-wrapper -->
       <!--Fin-Contenido-->
       <footer class="main-footer">
-        <strong>Copyright &copy; 2016-2017 <a href="#">Comando PSUV C.A</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016-{{ date('Y') }} <a href="#">Comando PSUV C.A</a>.</strong> All rights reserved.
       </footer>
     </div><!-- .wrapper -->
     <!-- jQuery 2.1.4 -->
@@ -179,19 +185,6 @@
           language: {
           	url:'{{asset("plugins/datatables/spanish.json")}}'
           }
-        });
-
-        $("#borrar").click(function(event) {
-          //event.Preventdefault();
-          var txt;
-            var r = confirm("Press a button!");
-            if (r == true) {
-               $.get('{{route("borrar.base")}}', function(data) {
-                 alert("Borrado con exito")
-               });
-            } else {
-                alert("No va borrar")
-            }
         });
       })
     </script>
