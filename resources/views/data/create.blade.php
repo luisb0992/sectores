@@ -53,12 +53,9 @@
 						</div>
 
 						<div class="form-group">
-							<label class="control-label" for="sectores">Sectores S.: *</label>
-							<select class="form-control select2" name="sector" id="" required="">
-								@foreach($sectores as $sector)
-								<option value="{{ $sector->SECTORES_SOCIALES }}">{{ $sector->SECTORES_SOCIALES }}</option>
-								@endforeach
-							</select>
+							<label class="control-label" for="sector">Sector Social: </label>
+							<input type="hidden" name="sector_id" value="{{ $sector->Id }}" readonly="" class="form-control">
+							<input type="text" value="{{ $sector->SECTORES_SOCIALES }}" readonly="" class="form-control">
 						</div>
 
 						<div class="form-group">

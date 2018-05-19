@@ -35,7 +35,12 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::get('/lineas','GraficosController@lineas')->name('lineas.grafico');
 	Route::get('/sectoresGraficos','GraficosController@sectores')->name('sectores.grafico');
 	// carga de data sectores sociales
+	Route::get('verdata','DataController@index')->name('verData');
 	Route::get('datasala','DataController@create')->name('createData');
 	Route::post('datasala','DataController@store')->name('cargaData');
+	Route::get('statusdata','DataController@status')->name('statusData');
+	Route::post('statusdata','DataController@cambioStatus')->name('cambioStatus');
+	Route::post('alldata','DataController@allData')->name('allData');
+	Route::get('datasala/{id}','DataController@edit')->name('editData');
 	Route::get('parro/{municipio}','DataController@parroquias');
 });

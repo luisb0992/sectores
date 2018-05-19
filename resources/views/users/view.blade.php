@@ -27,9 +27,10 @@
     	</div>
 			<div class="col-md-4">
 				<h4>Detalles del Usuario</h4>
+        <p><b>Cedula: </b> {{$user->cedula}} </p>
 				<p><b>Nombre: </b> {{$user->nombres.' '.$user->apellidos}} </p>
         <p><b>Usuario: </b> {{$user->usuario}} </p>
-        <p><b>Parroquia: </b>{{$user->parroquia}}</p>
+        <p><b>Sector: </b>{{$user->sector}}</p>
 			</div>
 		
 		</div>

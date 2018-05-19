@@ -103,7 +103,7 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-            <li class="header">MENÚ</li>
+          @if(\Auth::user()->rol == 'U')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i>
@@ -111,11 +111,14 @@
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Ver usuarios</a></li>
-                <li><a href="{{ route('users.create') }}"><i class="fa fa-circle-o"></i>Agregar usuario</a></li>
+                <li>
+                  <a href="{{ route('users.index') }}"><i class="fa fa-user-plus"></i>Ver Usuario</a>
+                </li>
+                <li>
+                  <a href="{{ route('users.create') }}"><i class="fa fa-user-plus"></i>Registrar Usuario</a>
+                </li>
               </ul>
             </li>
-
             
             <li>
               <a href="{{route('lineas.grafico')}}">
@@ -126,11 +129,31 @@
              <li>
               <a href="{{route('sectores.grafico')}}">
                 <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
+              </a>
+            </li>
             <li>
               <a href="{{ route('createData') }}">
-                <i class="fa fa-plus-square"></i> <span>Sectores</span>
+                <i class="fa fa-plus-square"></i> <span>Cargar Sectores</span>
               </a>
-            </li>       
+            </li>
+            @endif
+            @if(\Auth::user()->rol == 'A')
+            <li>
+              <a href="{{ route('statusData') }}">
+                <i class="fa fa-database"></i> <span>DATA</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ route('verData') }}">
+                <i class="fa fa-plus-square"></i> <span>Ver Data Cargada</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{route('lineas.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
+              </a>
+            </li>
+            @endif       
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -169,8 +192,8 @@
     <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/highcharts.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/exporting.js')}}"></script>
-    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-    <script src="https://code.highcharts.com/js/highcharts-more.js"></script>
+    <!-- <script src= "https://cdn.zingchart.com/zingchart.min.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/js/highcharts-more.js"></script> -->
     <script type="text/javascript">
       $(document).ready(function(){
       	//Eliminar alertas que no contengan la clase alert-important luego de 7seg

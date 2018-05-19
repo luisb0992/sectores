@@ -12,20 +12,17 @@
 		<!-- Formulario -->
 		
 
-		<div class="box box-danger">
+		<div class="box box-danger box-solid">
 	      <div class="box-header with-border">
-	        <h3 class="box-title"><i class="fa fa-users"></i> Usuarios</h3>
-	        <span class="pull-right">
-					
-					</span>
+	        <h3 class="box-title"><i class="fa fa-users"></i> Nuevo Usuario</h3>
+	        <span class="pull-right"></span>
 	      </div>
       	<div class="box-body">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
+				<div class="col-md-8 col-md-offset-2">
 					<form class="" action="{{ route('users.store') }}" method="POST" enctype="multipart/form-data">
 						{{ method_field( 'POST' ) }}
 						{{ csrf_field() }}
-						<h4>Agregar Usuario</h4>
 						<div class="form-group {{ $errors->has('cedula')?'has-error':'' }}">
 							<label class="control-label" for="cedula">Cedula: *</label>
 							<input id="cedula" class="form-control" type="text" name="cedula" value="{{ old('cedula')?old('cedula'):'' }}" placeholder="Cedula" required>
@@ -47,11 +44,13 @@
 						</div>
 
 						<div class="form-group {{ $errors->has('email')?'has-error':'' }}">
-							<label class="control-label" for="email">Parroquias: *</label>
-							<select class="form-control" name="parroquia">
+							<label class="control-label" for="email">Sector: *</label>
+							<select class="form-control" name="sector_id">
 								<option value="">Seleccione...</option>
-								@foreach($parroquias as $p)
-									<option value="{{$p->PARROQUIA}}">{{$p->PARROQUIA}}</option>
+								@foreach($sectores as $p)
+									<option value="{{ $p->Id }}">
+										{{ $p->SECTORES_SOCIALES }}
+									</option>
 								@endforeach
 							</select>
 						</div>
@@ -67,19 +66,20 @@
 						</div>
 
 						@if (count($errors) > 0)
-		          <div class="alert alert-danger alert-important">
-			          <ul>
-			            @foreach($errors->all() as $error)
-			              <li>{{$error}}</li>
-			            @endforeach
-			          </ul>  
-		          </div>
-		        @endif
+				          <div class="alert alert-danger alert-important">
+					          <ul>
+					            @foreach($errors->all() as $error)
+					              <li>{{$error}}</li>
+					            @endforeach
+					          </ul>  
+				          </div>
+				        @endif
 
 						<div class="form-group text-right">
 							<a class="btn btn-flat btn-default" href="{{route('users.index')}}"><i class="fa fa-reply"></i> Atras</a>
 							<button class="btn btn-flat btn-primary" type="submit"><i class="fa fa-send"></i> Guardar</button>
 						</div>
+						
 					</form>
 				</div>
 		</div>

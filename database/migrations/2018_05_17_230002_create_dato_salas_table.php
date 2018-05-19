@@ -17,9 +17,10 @@ class CreateDatoSalasTable extends Migration
             $table->increments('id');
             $table->string('hora_reporte')->nullable();
             $table->string('hora_ejecucion')->nullable();
-            $table->string('sector')->nullable();
+            $table->string('sector_id')->nullable();
             $table->string('municipio')->nullable();
             $table->string('parroquia')->nullable();
+            $table->string('status')->nullable();
             $table->string('total');
             $table->timestamps();
         });

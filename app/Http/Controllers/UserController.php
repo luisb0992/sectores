@@ -6,8 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
-use App\Centros;
-use App\Comunidades;
+use App\Centro;
+use App\Sector;
+use App\SS;
 
 class UserController extends Controller
 {
@@ -18,7 +19,7 @@ class UserController extends Controller
      */
     public function index()
     {
-    	$users = User::where('id','!=',1)->get();
+    	$users = User::all();
     	return view('users.index',['users'=>$users]);
     }
 
@@ -30,10 +31,12 @@ class UserController extends Controller
     public function create()
     {
 
-      $parroquias = Centros::parroquias();
+      $sectores = SS::all();
       
-      //dd($parroquias);
-      return view("users.create",['parroquias'=>$parroquias]);
+      //dd($sectores);
+      return view("users.create",[
+        'sectores' => $sectores
+      ]);
     }
 
     /**
@@ -47,8 +50,7 @@ class UserController extends Controller
       $this->validate($request, [
         'nombres' => 'required',
         'usuario' =>'required|min:5|unique:users',
-        'password' => 'required|min:6|confirmed',
-        'usuario' => 'required|unique:users'
+        'password' => 'required|min:6|confirmed'
       ]);
 
       $user = new User;
@@ -91,9 +93,9 @@ class UserController extends Controller
     {
       $user = user::findOrFail($id);
 
-       $parroquias = Centros::parroquias();
+      $sectores = Sector::all();
 
-      return view("users.edit", ["user" => $user,"parroquias"=>$parroquias]);
+      return view("users.edit", ["user" => $user, "sectores" => $sectores]);
     }
 
     /**
