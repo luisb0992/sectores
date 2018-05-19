@@ -103,6 +103,7 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
+          @if(\Auth::user()->rol == 'U')
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-users"></i>
@@ -118,8 +119,6 @@
                 </li>
               </ul>
             </li>
-
-
             
             <li>
               <a href="{{route('lineas.grafico')}}">
@@ -134,9 +133,27 @@
             </li>
             <li>
               <a href="{{ route('createData') }}">
-                <i class="fa fa-plus-square"></i> <span>Sectores</span>
+                <i class="fa fa-plus-square"></i> <span>Cargar Sectores</span>
               </a>
-            </li>       
+            </li>
+            @endif
+            @if(\Auth::user()->rol == 'A')
+            <li>
+              <a href="{{ route('statusData') }}">
+                <i class="fa fa-database"></i> <span>DATA</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ route('verData') }}">
+                <i class="fa fa-plus-square"></i> <span>Ver Data Cargada</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{route('lineas.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
+              </a>
+            </li>
+            @endif       
           </ul>
         </section>
         <!-- /.sidebar -->
@@ -175,8 +192,8 @@
     <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/highcharts.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/exporting.js')}}"></script>
-    <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-    <script src="https://code.highcharts.com/js/highcharts-more.js"></script>
+    <!-- <script src= "https://cdn.zingchart.com/zingchart.min.js"></script> -->
+    <!-- <script src="https://code.highcharts.com/js/highcharts-more.js"></script> -->
     <script type="text/javascript">
       $(document).ready(function(){
       	//Eliminar alertas que no contengan la clase alert-important luego de 7seg

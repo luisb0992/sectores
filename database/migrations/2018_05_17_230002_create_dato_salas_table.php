@@ -20,6 +20,7 @@ class CreateDatoSalasTable extends Migration
             $table->string('sector_id')->nullable();
             $table->string('municipio')->nullable();
             $table->string('parroquia')->nullable();
+            $table->string('status')->nullable();
             $table->string('total');
             $table->timestamps();
         });

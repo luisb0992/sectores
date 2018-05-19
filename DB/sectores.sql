@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-05-2018 a las 01:30:43
+-- Tiempo de generación: 19-05-2018 a las 18:03:45
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.3
 
@@ -726,6 +726,7 @@ CREATE TABLE `datos_sala` (
   `municipio` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parroquia` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `total` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` int(2) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -734,9 +735,11 @@ CREATE TABLE `datos_sala` (
 -- Volcado de datos para la tabla `datos_sala`
 --
 
-INSERT INTO `datos_sala` (`id`, `hora_reporte`, `hora_ejecucion`, `sector_id`, `municipio`, `parroquia`, `total`, `created_at`, `updated_at`) VALUES
-(1, '7:00 A:M', '22:05 pm', '1', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '1500', '2018-05-18 03:23:39', '2018-05-18 03:23:39'),
-(2, '12:00 P:M', '22:05 pm', '1', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '800', '2018-05-18 03:23:55', '2018-05-18 03:23:55');
+INSERT INTO `datos_sala` (`id`, `hora_reporte`, `hora_ejecucion`, `sector_id`, `municipio`, `parroquia`, `total`, `status`, `created_at`, `updated_at`) VALUES
+(1, '7:00 A:M', '22:05 pm', '1', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '1500', 0, '2018-05-18 03:23:39', '2018-05-19 19:18:14'),
+(2, '12:00 P:M', '22:05 pm', '1', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '800', 0, '2018-05-18 03:23:55', '2018-05-19 19:43:17'),
+(3, '12:00 P:M', '23:05 pm', '6', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '1899', 0, '2018-05-18 03:32:05', '2018-05-19 19:18:17'),
+(4, '9:00 A:M', '23:05 pm', '6', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '950', 0, '2018-05-18 03:38:55', '2018-05-19 19:43:21');
 
 -- --------------------------------------------------------
 
@@ -902,7 +905,8 @@ INSERT INTO `ss` (`Id`, `SECTORES_SOCIALES`) VALUES
 (NULL, 'ABOGADOS'),
 (NULL, 'ECONOMIA SOCIAL'),
 (NULL, 'GLORIA DEL DEPORTE'),
-(NULL, 'INSTITUCIONES ');
+(NULL, 'INSTITUCIONES '),
+(25, 'master');
 
 -- --------------------------------------------------------
 
@@ -929,8 +933,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `cedula`, `nombres`, `apellidos`, `usuario`, `password`, `sector_id`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', NULL, '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
-(4, '20990397', 'francisco', 'hernandez', 'francisco', '$2y$10$WdCMFM6XjMZNp4jdHwY3tukMAjVeaPO7Wh3uekan124JEpc.SvqEa', NULL, 'U', NULL, '2018-05-18 03:19:27', '2018-05-18 03:19:27');
+(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', 'JYkluh2Jl07n6cW7iCh360l6KVN1duW7G7KxXjayF2cZ5fWrfuACGFrcvgbc', '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
+(6, '20119485', 'luis', 'barrios', 'luis099224', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '6', 'U', 'M1LgyutVj58T4OtN8up9t0MS6Z0IpTqFQQTjYblJT9O3zyhCg2M31dvnAgf4', '2018-05-18 03:21:44', '2018-05-18 03:21:44'),
+(7, '20990397', 'francisco', 'hernandez', 'francisco', '$2y$10$WiPF6NHfCz5JXub/9kbiTuuFs3YBxp/4GBIyhN2dzVAUoouey.TJ6', '15', 'U', 'PT5NWh0o7Zyax4rsVpepPcAEGf0eNf3jbwVuP9Huyht1esv2YO28DXX6en1o', '2018-05-18 03:27:58', '2018-05-18 03:27:58'),
+(8, '12345678', 'mariangel', 'hernandez', 'mariangelh', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '25', 'A', NULL, NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -981,7 +987,7 @@ ALTER TABLE `centros`
 -- AUTO_INCREMENT de la tabla `datos_sala`
 --
 ALTER TABLE `datos_sala`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -993,7 +999,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

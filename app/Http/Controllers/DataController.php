@@ -17,7 +17,9 @@ class DataController extends Controller
      */
     public function index()
     {
-        //
+        return view('data.index',[
+            'data' => DatoSala::where('status', 1)->get()
+        ]);
     }
 
     /**
@@ -54,6 +56,7 @@ class DataController extends Controller
         $data = new DatoSala;
         $data->fill($request->all());
         $data->hora_ejecucion = date('H:m a');
+        $data->status = 0;
 
         if($data->save()){
             return redirect("datasala")->with([
@@ -117,5 +120,23 @@ class DataController extends Controller
     public function parroquias($municipio){
         $parro = Centro::where('municipio', $municipio)->groupBy('parroquia')->get();
         return response()->json($parro);
+    }
+
+    public function status(){
+
+        $data = DatoSala::where('status', 0)->get();
+
+        return view('data.status',[
+            'data' => $data
+        ]);
+    }
+
+    public function cambioStatus(Request $request){
+
+        $data = DatoSala::findOrFail($request->valor);
+        $data->status = 1;
+        $data->save();
+
+        return response()->json($data);
     }
 }
