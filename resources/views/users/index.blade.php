@@ -43,7 +43,9 @@
 								<th class="text-center">Nombre y Apellido</th>
 								<th class="text-center">Usuario</th>
 								<th class="text-center">Sector</th>
+								@if(\Auth::user()->rol == 'A')
 								<th class="text-center">Accion</th>
+								@endif
 							</tr>
 						</thead>
 						<tbody class="text-center">
@@ -54,10 +56,12 @@
 									<td>{{$d->nombres.' '.$d->apellidos}}</td>
 									<td>{{$d->usuario}}</td>
 									<td>{{$d->sector->SECTORES_SOCIALES}}</td>
+									@if(\Auth::user()->rol == 'A')
 									<td>
 										<a class="btn btn-primary btn-flat btn-sm" href="{{ route('users.show',[$d->id])}}"><i class="fa fa-search"></i></a>
 										<a href="{{route('users.edit',[$d->id])}}" class="btn btn-flat btn-success btn-sm" title="Editar"><i class="fa fa-edit"></i></a>
 									</td>
+									@endif
 								</tr>
 							@endforeach
 						</tbody>

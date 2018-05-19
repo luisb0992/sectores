@@ -29,14 +29,13 @@ class DataController extends Controller
      */
     public function create()
     {
-        // $sector1 = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
 
         $sector = \DB::table('ss')
                     ->join('users', 'ss.Id', '=' , 'users.sector_id')
                     ->select('ss.*')
                     ->where('users.sector_id', \Auth::user()->sector_id)
                     ->first();
-        // dd($sector);
+        // dd($data);
 
         return view('data.create',[
             'centro' => Centro::groupBy('municipio')->get(),
@@ -53,22 +52,37 @@ class DataController extends Controller
     public function store(Request $request)
     {
         // dd($request->all());
-        $data = new DatoSala;
-        $data->fill($request->all());
-        $data->hora_ejecucion = date('H:m a');
-        $data->status = 0;
+        // $data = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
 
-        if($data->save()){
+        $hora_reporte = DatoSala::where('sector_id', \Auth::user()->sector_id)->where('hora_reporte', $request->hora_reporte)->first();
+        
+        if ($hora_reporte) {
+            
             return redirect("datasala")->with([
-            'flash_message' => 'Reporte agregado correctamente.',
-            'flash_class' => 'alert-success'
-            ]);
-        }else{
-            return redirect("datasala")->with([
-            'flash_message' => 'Ha ocurrido un error.',
-            'flash_class' => 'alert-danger',
-            'flash_important' => true
+                'flash_message' => 'Ya existe una carga registrada en dicha hora!',
+                'flash_class' => 'alert-danger',
+                'flash_important' => true
           ]);
+
+        }else{
+
+            $data = new DatoSala;
+            $data->fill($request->all());
+            $data->hora_ejecucion = date('H:m a');
+            $data->status = 0;
+
+            if($data->save()){
+                return redirect("datasala")->with([
+                'flash_message' => 'Reporte agregado correctamente.',
+                'flash_class' => 'alert-success'
+                ]);
+            }else{
+                return redirect("datasala")->with([
+                'flash_message' => 'Ha ocurrido un error.',
+                'flash_class' => 'alert-danger',
+                'flash_important' => true
+              ]);
+            }
         }
     }
 

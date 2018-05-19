@@ -41,6 +41,7 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::get('statusdata','DataController@status')->name('statusData');
 	Route::post('statusdata','DataController@cambioStatus')->name('cambioStatus');
 	Route::post('alldata','DataController@allData')->name('allData');
+	Route::post('deletedata','DataController@eliminarData')->name('eliminarData');
 	Route::get('datasala/{id}','DataController@edit')->name('editData');
 	Route::get('parro/{municipio}','DataController@parroquias');
 });
