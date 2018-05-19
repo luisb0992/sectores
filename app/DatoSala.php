@@ -8,6 +8,8 @@ class DatoSala extends Model
 {
     protected $table = "datos_sala";
 
+    protected $primaryKey = "id";
+
     protected $fillable = ["hora_reporte", "municipio", "parroquia", "sector_id", "total", "hora_ejecucion"];
 
     public function sector(){

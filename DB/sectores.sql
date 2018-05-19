@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2018 a las 18:03:45
+-- Tiempo de generación: 19-05-2018 a las 23:50:20
 -- Versión del servidor: 10.1.31-MariaDB
--- Versión de PHP: 7.2.3
+-- Versión de PHP: 7.1.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -720,9 +720,9 @@ CREATE TABLE `centros` (
 
 CREATE TABLE `datos_sala` (
   `id` int(10) UNSIGNED NOT NULL,
-  `hora_reporte` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hora_reporte` time DEFAULT NULL,
   `hora_ejecucion` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `sector_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sector_id` int(11) NOT NULL,
   `municipio` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `parroquia` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `total` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -730,16 +730,6 @@ CREATE TABLE `datos_sala` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `datos_sala`
---
-
-INSERT INTO `datos_sala` (`id`, `hora_reporte`, `hora_ejecucion`, `sector_id`, `municipio`, `parroquia`, `total`, `status`, `created_at`, `updated_at`) VALUES
-(1, '7:00 A:M', '22:05 pm', '1', 'MP. JOSE R REVENGA', 'CM. EL CONSEJO', '1500', 0, '2018-05-18 03:23:39', '2018-05-19 19:18:14'),
-(2, '12:00 P:M', '22:05 pm', '1', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '800', 0, '2018-05-18 03:23:55', '2018-05-19 19:43:17'),
-(3, '12:00 P:M', '23:05 pm', '6', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '1899', 0, '2018-05-18 03:32:05', '2018-05-19 19:18:17'),
-(4, '9:00 A:M', '23:05 pm', '6', 'MP. JOSE ANGEL LAMAS', 'CM. SANTA CRUZ', '950', 0, '2018-05-18 03:38:55', '2018-05-19 19:43:21');
 
 -- --------------------------------------------------------
 
@@ -825,7 +815,7 @@ CREATE TABLE `password_resets` (
 --
 
 CREATE TABLE `ss` (
-  `Id` int(11) DEFAULT NULL,
+  `Id` int(11) NOT NULL,
   `SECTORES_SOCIALES` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -858,54 +848,6 @@ INSERT INTO `ss` (`Id`, `SECTORES_SOCIALES`) VALUES
 (22, 'ECONOMIA SOCIAL'),
 (23, 'GLORIA DEL DEPORTE'),
 (24, 'INSTITUCIONES '),
-(NULL, 'SALUD'),
-(NULL, 'VIVIENDA Y POBLADORES'),
-(NULL, 'EDUCACIÓN'),
-(NULL, 'HOGARES DE LA PATRIA '),
-(NULL, 'FRENTE DE MUEJERES '),
-(NULL, 'CHAMBA JUVENIL'),
-(NULL, 'TRANSPORTE'),
-(NULL, 'FRENTE DE DISCAPACIDAD '),
-(NULL, 'ADULTO MAYOR'),
-(NULL, 'FRENTE MOTORIZADO'),
-(NULL, 'PLAN MURALES'),
-(NULL, 'FRENTE FRANCISCO DE MIRANDA'),
-(NULL, 'ROBERT SERRA '),
-(NULL, 'TRABAJADORES '),
-(NULL, 'CONSEJOS COMUNALES '),
-(NULL, 'FRENTE CAMPESINOS Y PESCADORES '),
-(NULL, 'FRENTE DE REFUGIADOS '),
-(NULL, 'FRENTE INDIGENAS '),
-(NULL, 'ESTUDIANTES UNIVERSITARIOS '),
-(NULL, 'ECOSOCIALISTA '),
-(NULL, 'ABOGADOS'),
-(NULL, 'ECONOMIA SOCIAL'),
-(NULL, 'GLORIA DEL DEPORTE'),
-(NULL, 'INSTITUCIONES '),
-(NULL, 'SALUD'),
-(NULL, 'VIVIENDA Y POBLADORES'),
-(NULL, 'EDUCACIÓN'),
-(NULL, 'HOGARES DE LA PATRIA '),
-(NULL, 'FRENTE DE MUEJERES '),
-(NULL, 'CHAMBA JUVENIL'),
-(NULL, 'TRANSPORTE'),
-(NULL, 'FRENTE DE DISCAPACIDAD '),
-(NULL, 'ADULTO MAYOR'),
-(NULL, 'FRENTE MOTORIZADO'),
-(NULL, 'PLAN MURALES'),
-(NULL, 'FRENTE FRANCISCO DE MIRANDA'),
-(NULL, 'ROBERT SERRA '),
-(NULL, 'TRABAJADORES '),
-(NULL, 'CONSEJOS COMUNALES '),
-(NULL, 'FRENTE CAMPESINOS Y PESCADORES '),
-(NULL, 'FRENTE DE REFUGIADOS '),
-(NULL, 'FRENTE INDIGENAS '),
-(NULL, 'ESTUDIANTES UNIVERSITARIOS '),
-(NULL, 'ECOSOCIALISTA '),
-(NULL, 'ABOGADOS'),
-(NULL, 'ECONOMIA SOCIAL'),
-(NULL, 'GLORIA DEL DEPORTE'),
-(NULL, 'INSTITUCIONES '),
 (25, 'master');
 
 -- --------------------------------------------------------
@@ -933,10 +875,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `cedula`, `nombres`, `apellidos`, `usuario`, `password`, `sector_id`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', 'JYkluh2Jl07n6cW7iCh360l6KVN1duW7G7KxXjayF2cZ5fWrfuACGFrcvgbc', '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
+(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', 'yDuUWXHYtoDpYhEd7GDY9IrcVwYGvENWmbY9EoyebEsr8hG8L4CM6khks5CN', '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
 (6, '20119485', 'luis', 'barrios', 'luis099224', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '6', 'U', 'M1LgyutVj58T4OtN8up9t0MS6Z0IpTqFQQTjYblJT9O3zyhCg2M31dvnAgf4', '2018-05-18 03:21:44', '2018-05-18 03:21:44'),
 (7, '20990397', 'francisco', 'hernandez', 'francisco', '$2y$10$WiPF6NHfCz5JXub/9kbiTuuFs3YBxp/4GBIyhN2dzVAUoouey.TJ6', '15', 'U', 'PT5NWh0o7Zyax4rsVpepPcAEGf0eNf3jbwVuP9Huyht1esv2YO28DXX6en1o', '2018-05-18 03:27:58', '2018-05-18 03:27:58'),
-(8, '12345678', 'mariangel', 'hernandez', 'mariangelh', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '25', 'A', NULL, NULL, NULL);
+(8, '12345678', 'mariangel', 'hernandez', 'mariangelh', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '25', 'A', 'PwE2tlE60sUWyZV79R5jRDHP6hlEcE698U3n4HfvlLrvoN1bnuSiFy0fxXUc', NULL, NULL);
 
 --
 -- Índices para tablas volcadas
@@ -967,6 +909,12 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indices de la tabla `ss`
+--
+ALTER TABLE `ss`
+  ADD PRIMARY KEY (`Id`);
+
+--
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
@@ -987,7 +935,7 @@ ALTER TABLE `centros`
 -- AUTO_INCREMENT de la tabla `datos_sala`
 --
 ALTER TABLE `datos_sala`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
