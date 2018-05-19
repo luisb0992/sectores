@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Sector;
 
 class LoginController extends Controller
 {
     public function index()
     {
- 			return view('dashboard');
-	 	}
+    	$sector = Sector::where('id', \Auth::user()->sector_id)->first();
+ 		return view('dashboard',['sector' => $sector]);
+	}
 
 	 public function login(Request $request)
 	 {

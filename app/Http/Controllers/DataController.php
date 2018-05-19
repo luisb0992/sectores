@@ -139,4 +139,13 @@ class DataController extends Controller
 
         return response()->json($data);
     }
+
+    public function allData(){
+
+        $data = DatoSala::where('status', 0)->update(['status' => 1]);
+
+        return response()->json($data);
+    }
+
+
 }
