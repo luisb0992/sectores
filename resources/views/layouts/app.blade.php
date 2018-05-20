@@ -98,41 +98,15 @@
           <!-- Sidebar user panel -->
           <!-- sidebar menu: : style can be found in sidebar.less -->
           <ul class="sidebar-menu">
-          @if(\Auth::user()->rol == 'U')
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-users"></i>
-                <span>Usuarios</span>
-                <i class="fa fa-angle-left pull-right"></i>
-              </a>
-              <ul class="treeview-menu">
-                <li>
-                  <a href="{{ route('users.index') }}"><i class="fa fa-user-plus"></i>Ver Usuario</a>
-                </li>
-                <li>
-                  <a href="{{ route('users.create') }}"><i class="fa fa-user-plus"></i>Registrar Usuario</a>
-                </li>
-              </ul>
-            </li>
-            
-            <li>
-              <a href="{{route('lineas.grafico')}}">
-                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
-              </a>
-            </li>
-
-             <li>
-              <a href="{{route('sectores.grafico')}}">
-                <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
-              </a>
-            </li>
+            @if(\Auth::user()->rol == 'U')
             <li>
               <a href="{{ route('createData') }}">
                 <i class="fa fa-plus-square"></i> <span>Cargar Sectores</span>
               </a>
             </li>
             @endif
-            @if(\Auth::user()->rol == 'A')
+
+            @if(\Auth::user()->rol == 'C')
             <li>
               <a href="{{ route('statusData') }}">
                 <i class="fa fa-database"></i> <span>Data por Cargar</span>
@@ -153,6 +127,37 @@
                 <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
               </a>
             </li>
+            @endif
+
+            @if(\Auth::user()->rol == 'A')
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span>Usuarios</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+                <li>
+                  <a href="{{ route('users.index') }}"><i class="fa fa-user-plus"></i>Ver Usuario</a>
+                </li>
+                <li>
+                  <a href="{{ route('users.create') }}"><i class="fa fa-user-plus"></i>Registrar Usuario</a>
+                </li>
+              </ul>
+            </li>
+      
+            <li>
+              <a href="{{route('lineas.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Comportamiento</span>
+              </a>
+            </li>
+
+             <li>
+              <a href="{{route('sectores.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
+              </a>
+            </li>
+            
             @endif       
           </ul>
         </section>
