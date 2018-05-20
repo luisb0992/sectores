@@ -41,6 +41,7 @@ class GraficosController extends Controller
     		->select(['datos_sala.*','metas_sectores.*'])
     					->selectRaw('SUM(datos_sala.total) as cantidad')
     					->leftjoin('metas_sectores','metas_sectores.Id','=','datos_sala.sector_id')
+    					->where('metas_sectores.Id','!=',25)
     					->groupBy('datos_sala.sector_id')
     					->get();
 
@@ -61,7 +62,9 @@ class GraficosController extends Controller
     					->selectRaw('SUM(datos_sala.total) as cantidad')
     					->leftjoin('metas_sectores','metas_sectores.Id','=','datos_sala.sector_id')
     					->groupBy('datos_sala.sector_id')
-    					->where('metas_sectores.Id','!=',26)
+    					->where('metas_sectores.Id','!=',25)
+    					//->where('id','!=',26)
+    					//->orderBy('datos_sala.total','DESC')
     					->get();
 
 
@@ -71,6 +74,8 @@ class GraficosController extends Controller
     					->join('metas_sectores','metas_sectores.Id','=','datos_sala.sector_id')
     					//->groupBy('datos_sala.sector_id')
     					->first();
+
+    					
 
     					//dd($total);
     				//dd($sectores);

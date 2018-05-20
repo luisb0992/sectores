@@ -58,6 +58,10 @@ grafico();
               var total = parseInt(val.META_ELECTORAL);
                var porcentaje_total = Math.round(parseInt(val.cantidad) * 100 / total);
 
+               if (porcentaje_total > 100) {
+                var porcentaje_total = 100;
+               }
+
    var myConfig7 = {
     "type":"gauge",
       "title":{ 
@@ -153,7 +157,7 @@ grafico();
       "background-color":"#000000"
     },
     "series":[
-      {"values":[41]}
+      {"values":[80]}
     ]
   };
    
