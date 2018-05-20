@@ -3,20 +3,21 @@
   <div class="content">
     <div class="row">
   <h3 class="text-center">Elecciones Presidenciales</h3>
-  <!--<center><h3>Ultima Actualizacion - <strong>{{$sectores[1]->SECTORES_SOCIALES}}</strong></h3></center>-->
-    @for ($i = 0; $i < 24; $i++)
+  @php $i = 0; @endphp
+    @foreach($sectores as $s)
     <div class="col-md-4">
       <div class="box box-danger">
         <div class="box-body">
           <div class="box-footer box-danger">
             <div id='myChart{{$i}}' style="min-width: 310px; max-width: 400px;height: 300px;margin: 0 auto"></div>
-            <center><h3>Meta Electoral: {{number_format($sectores[$i]->META_ELECTORAL,0,",",".")}}</h3>
-   
+            <center><h3>Meta Electoral: {{$s->META_ELECTORAL}}</h3>
+              <center><h3>Votos: {{$s->cantidad}}</h3>
           </div>
         </div>
       </div>         
     </div>
-  @endfor
+    @php $i++; @endphp
+  @endforeach
 </div>
 </div>
 @endsection
@@ -40,10 +41,10 @@ grafico();
     .done(function(data) {
       var div = "";
       var i = 0;
-  console.log(data.data)
+  //console.log(data.data)
       $.each(data.data, function(index, val) {
         console.log(val.total)
-              var total = parseInt(val.total);
+              var total = parseInt(val.META_ELECTORAL);
                var porcentaje_total = Math.round(parseInt(val.cantidad) * 100 / total);
 
    var myConfig7 = {

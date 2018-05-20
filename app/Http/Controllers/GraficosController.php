@@ -29,7 +29,17 @@ class GraficosController extends Controller
 
     public function sectoresGrafico()
     {
-    		$sectores = Sector::all();
+    		//$sectores = Sector::all();
+
+    		$sectores = DB::table('datos_sala')
+    		->select(['datos_sala.*','metas_sectores.*'])
+    					->selectRaw('SUM(datos_sala.total) as cantidad')
+    					->leftjoin('metas_sectores','metas_sectores.Id','=','datos_sala.sector_id')
+    					->groupBy('datos_sala.sector_id')
+    					->get();
+
+    		//dd($sectores);
+
 
     		return response()->json(['data'=>$sectores]);
 
@@ -38,7 +48,14 @@ class GraficosController extends Controller
 
    public function sectores()
    {
-   		$sectores = Sector::all();
+   		$sectores = DB::table('datos_sala')
+    		->select(['datos_sala.*','metas_sectores.*'])
+    					->selectRaw('SUM(datos_sala.total) as cantidad')
+    					->leftjoin('metas_sectores','metas_sectores.Id','=','datos_sala.sector_id')
+    					->groupBy('datos_sala.sector_id')
+    					->get();
+
+    				//dd($sectores);
 
    		return view('graficos.sectores',['sectores'=>$sectores]);
    }

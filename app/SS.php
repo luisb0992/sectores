@@ -34,7 +34,6 @@ class SS extends Model
 
     protected function setData($hora){
     	switch ($hora) {
-            case 6: return 0; break;
     		case 7: return 0; break;
     		case 8: return 1; break;
     		case 9: return 2; break;
