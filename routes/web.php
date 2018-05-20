@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::post('/com','EstructuraController@comunidades')->name('comunidad.registrar');
 	Route::get('/lineas','GraficosController@lineas')->name('lineas.grafico');
 	Route::get('/sectoresGraficos','GraficosController@sectores')->name('sectores.grafico');
-	Route::get('graficoMuni','GraficoController@graficoMuni')->name('municipio.grafico');
+	Route::get('graficoMuni','GraficosController@graficoMuni')->name('municipio.grafico');
 	// carga de data sectores sociales
 	Route::get('verdata','DataController@index')->name('verData');
 	Route::get('datasala','DataController@create')->name('createData');
@@ -49,7 +49,7 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::get('parro/{municipio}','DataController@parroquias');
 
 	Route::get('DataSectoresGraficos','GraficosController@sectoresGrafico')->name('data.sectores');
-
+	Route::get('DataMunicipiosGraficos','GraficosController@reloadMuni')->name('data.municipios');
 
 	Route::get('bitacora','BitacoraController@index')->name('bitacora');
 
