@@ -54,7 +54,10 @@ class DataController extends Controller
         // dd($request->all());
         // $data = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
 
-        $hora_reporte = DatoSala::where('sector_id', \Auth::user()->sector_id)->where('hora_reporte', $request->hora_reporte)->first();
+        $hora_reporte = DatoSala::where('sector_id', \Auth::user()->sector_id)
+                        ->where('hora_reporte', $request->hora_reporte)
+                        ->where('municipio', $request->municipio)
+                        ->where('parroquia', $request->parroquia)->first();
         
         if ($hora_reporte) {
             
