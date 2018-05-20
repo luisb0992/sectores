@@ -145,6 +145,12 @@
                 </li>
               </ul>
             </li>
+
+            <li>
+              <a href="{{ route('bitacora') }}">
+                <i class="fa fa-plus-square"></i> <span>Bitacora</span>
+              </a>
+            </li>
       
             <li>
               <a href="{{route('lineas.grafico')}}">
