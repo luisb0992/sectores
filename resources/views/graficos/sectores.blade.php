@@ -2,16 +2,16 @@
 @section('content')
   <div class="content">
     <div class="row">
-  <h3 class="text-center">Simulacro Electoral</h3>
-  <center><h3>Ultima Actualizacion - <strong>{{$municipio[1]->actualizacion}}</strong></h3></center>
-    @for ($i = 0; $i < 18; $i++)
-    <div class="col-md-6">
+  <h3 class="text-center">Elecciones Presidenciales</h3>
+  <!--<center><h3>Ultima Actualizacion - <strong>{{$sectores[1]->SECTORES_SOCIALES}}</strong></h3></center>-->
+    @for ($i = 0; $i < 24; $i++)
+    <div class="col-md-4">
       <div class="box box-danger">
         <div class="box-body">
           <div class="box-footer box-danger">
             <div id='myChart{{$i}}' style="min-width: 310px; max-width: 400px;height: 300px;margin: 0 auto"></div>
-            <center><h3>Meta Electoral: {{number_format($municipio[$i]->total,0,",",".")}}</h3>
-        <h3>Padròn Electoral: {{number_format($municipio[$i]->total_electores,0,",",".")}} </h3></center>
+            <center><h3>Meta Electoral: {{number_format($sectores[$i]->META_ELECTORAL,0,",",".")}}</h3>
+   
           </div>
         </div>
       </div>         
@@ -26,13 +26,13 @@
 
 $(document).ready(function () {
 grafico();
-    setInterval(grafico, 60 * 1000);
+    setInterval(grafico, 60 * 100);
 
    function grafico()
    {
 
     $.ajax({
-      url: '{{route('cargajefe')}}',
+      url: '{{route("data.sectores")}}',
       type: 'GET',
       dataType: 'json',
       
@@ -40,7 +40,7 @@ grafico();
     .done(function(data) {
       var div = "";
       var i = 0;
-  //console.log(data.data)
+  console.log(data.data)
       $.each(data.data, function(index, val) {
         console.log(val.total)
               var total = parseInt(val.total);
@@ -49,7 +49,7 @@ grafico();
    var myConfig7 = {
     "type":"gauge",
       "title":{ 
-      "text": val.municipio+" -- "+porcentaje_total+"%"
+      "text": val.SECTORES_SOCIALES
     },
     "scale-r":{
       "aperture":200,

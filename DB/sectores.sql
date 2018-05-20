@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2018 a las 23:50:20
+-- Tiempo de generación: 20-05-2018 a las 01:56:27
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.1.15
 
@@ -740,7 +740,7 @@ CREATE TABLE `datos_sala` (
 CREATE TABLE `metas_sectores` (
   `Id` int(11) DEFAULT NULL,
   `SECTORES_SOCIALES` varchar(255) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
-  `META ELECTORAL` double DEFAULT NULL,
+  `META_ELECTORAL` double DEFAULT NULL,
   `COMANDOS RECIBIDOS` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -748,7 +748,7 @@ CREATE TABLE `metas_sectores` (
 -- Volcado de datos para la tabla `metas_sectores`
 --
 
-INSERT INTO `metas_sectores` (`Id`, `SECTORES_SOCIALES`, `META ELECTORAL`, `COMANDOS RECIBIDOS`) VALUES
+INSERT INTO `metas_sectores` (`Id`, `SECTORES_SOCIALES`, `META_ELECTORAL`, `COMANDOS RECIBIDOS`) VALUES
 (1, 'SALUD', 18760, 312),
 (2, 'VIVIENDA Y POBLADORES', 11475, 191),
 (3, 'EDUCACIÓN', 53210, 886),
@@ -935,7 +935,7 @@ ALTER TABLE `centros`
 -- AUTO_INCREMENT de la tabla `datos_sala`
 --
 ALTER TABLE `datos_sala`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`

@@ -192,7 +192,8 @@
     <script type="text/javascript" src="{{asset('js/jquery-mask.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/highcharts.js')}}"></script>
     <script type="text/javascript" src="{{asset('plugins/highcharts/exporting.js')}}"></script>
-    <!-- <script src= "https://cdn.zingchart.com/zingchart.min.js"></script> -->
+    
+     <script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
     <!-- <script src="https://code.highcharts.com/js/highcharts-more.js"></script> -->
     <script type="text/javascript">
       $(document).ready(function(){

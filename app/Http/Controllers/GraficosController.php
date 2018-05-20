@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\DatoSala;
 use App\SS;
+USE App\Sector;
 use DB;
 
 class GraficosController extends Controller
@@ -26,12 +27,19 @@ class GraficosController extends Controller
       return view('graficos.comportamiento2',['sectores'=>$sectores]);
     }
 
-    public function sectoresGrafico(){
+    public function sectoresGrafico()
+    {
+    		$sectores = Sector::all();
+
+    		return response()->json(['data'=>$sectores]);
+
     }
 
 
    public function sectores()
    {
-   		return view('graficos.sectores');
+   		$sectores = Sector::all();
+
+   		return view('graficos.sectores',['sectores'=>$sectores]);
    }
 }
