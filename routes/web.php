@@ -45,5 +45,10 @@ Route::group(['middleware' => 'auth'], function() { //middleware auth
 	Route::post('deletedata','DataController@deleteData')->name('deleteData');
 	Route::get('datasala/{id}','DataController@edit')->name('editData');
 	Route::get('parro/{municipio}','DataController@parroquias');
+
 	Route::get('DataSectoresGraficos','GraficosController@sectoresGrafico')->name('data.sectores');
+
+
+	Route::get('bitacora','BitacoraController@index')->name('bitacora');
+
 });

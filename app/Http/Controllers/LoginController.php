@@ -10,9 +10,9 @@ class LoginController extends Controller
 {
     public function index()
     {
-    	$sector = Sector::where('id', \Auth::user()->sector_id)->first();
- 		return view('dashboard',['sector' => $sector]);
-	}
+    	 $sector = Sector::where('id', \Auth::user()->sector_id)->first();
+ 		   return view('dashboard',['sector' => $sector]);
+	  }
 
 	 public function login(Request $request)
 	 {

@@ -7,6 +7,7 @@ use App\DatoSala;
 use App\Centro;
 use App\Sector;
 use App\SS;
+use App\Bitacora;
 
 class DataController extends Controller
 {
@@ -51,8 +52,6 @@ class DataController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
-        // $data = DatoSala::where('sector_id', \Auth::user()->sector_id)->first();
 
         $hora_reporte = DatoSala::where('sector_id', \Auth::user()->sector_id)
                         ->where('hora_reporte', $request->hora_reporte)
@@ -75,6 +74,14 @@ class DataController extends Controller
             $data->status = 0;
 
             if($data->save()){
+
+                $bit = new Bitacora;
+                $bit->usuario = \Auth::user()->usuario;
+                $bit->proceso = 'Genero un nuevo reporte del municipio '. $request->municipio . ' y la parroquia '. $request->parroquia;
+                $bit->hora = date('H:m a');
+                $bit->total = $request->total;
+                $bit->save();
+                
                 return redirect("datasala")->with([
                 'flash_message' => 'Reporte agregado correctamente.',
                 'flash_class' => 'alert-success'
@@ -139,6 +146,7 @@ class DataController extends Controller
         return response()->json($parro);
     }
 
+    // retornar vista de subida de data
     public function status(){
 
         $data = DatoSala::where('status', 0)->get();
@@ -148,22 +156,38 @@ class DataController extends Controller
         ]);
     }
 
+    // subida de data uno por uno
     public function cambioStatus(Request $request){
 
         $data = DatoSala::findOrFail($request->valor);
         $data->status = 1;
         $data->save();
 
+        $bit = new Bitacora;
+        $bit->usuario = \Auth::user()->usuario;
+        $bit->proceso = 'Subio una nueva data del municipio '. $data->municipio . ' y la parroquia '. $data->parroquia;
+        $bit->hora = date('H:m a');
+        $bit->total = $data->total;
+        $bit->save();
+
         return response()->json($data);
     }
 
+    // subir toda la data
     public function allData(){
 
         $data = DatoSala::where('status', 0)->update(['status' => 1]);
+        
+        $bit = new Bitacora;
+        $bit->usuario = \Auth::user()->usuario;
+        $bit->proceso = 'Subio un total de '. $data . ' reportes restantes';
+        $bit->hora = date('H:m a');
+        $bit->save();
 
         return response()->json($data);
     }
 
+    // retornar vista eliminar data
     public function dataDelete(){
         
         $data = DatoSala::where('status', 1)->get();
@@ -173,9 +197,18 @@ class DataController extends Controller
         ]);
     }
 
+    // eliminar data
     public function deleteData(Request $request){
 
         $data = DatoSala::findOrFail($request->valor);
+
+        $bit = new Bitacora;
+        $bit->usuario = \Auth::user()->usuario;
+        $bit->proceso = 'Elimino un reporte del municipio '. $data->municipio . ' y de la parroquia '. $data->parroquia;
+        $bit->hora = date('H:m a');
+        $bit->total = $data->total;
+        $bit->save();
+
         $data->delete();
 
         return response()->json($data);
