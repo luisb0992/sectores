@@ -17,6 +17,7 @@
 						<div class="form-group">
 							<label class="control-label" for="horar">Hora del Reporte: *</label>
 							<select class="form-control" name="hora_reporte" id="horar" required="">
+								<option value="6:00 A:M">6:00 A:M</option>
 								<option value="7:00 A:M">7:00 A:M</option>
 								<option value="8:00 A:M">8:00 A:M</option>
 								<option value="9:00 A:M">9:00 A:M</option>

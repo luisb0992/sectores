@@ -70,12 +70,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
-                  <li class="user-header">
-                    <p>
-                      {{ Auth::user()->parroquia }}
-                      <small>LEYENDA DEL USUARIO ONLINE</small>
-                    </p>
-                  </li>
+                    <img src="{{ asset('img/LOGO_MEGA-02.png') }}" class="img-responsive">
                   
                   <!-- Menu Footer-->
                   <li class="user-footer">
@@ -140,12 +135,17 @@
             @if(\Auth::user()->rol == 'A')
             <li>
               <a href="{{ route('statusData') }}">
-                <i class="fa fa-database"></i> <span>DATA</span>
+                <i class="fa fa-database"></i> <span>Data por Cargar</span>
               </a>
             </li>
             <li>
               <a href="{{ route('verData') }}">
                 <i class="fa fa-plus-square"></i> <span>Ver Data Cargada</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ route('eliminarData') }}">
+                <i class="fa fa-plus-square"></i> <span>Eliminar Data Cargada</span>
               </a>
             </li>
             <li>

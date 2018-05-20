@@ -43,6 +43,24 @@
 			</table>
 		</div>
 	</div>
+
+	<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	      </div>
+	      <div class="modal-body text-center">
+	        <h3><i class="fa fa-check-circle text-success fa-2x"></i> 
+	        	Subida con Exito!
+	        	<i class="fa fa-refresh fa-spin text-primary fa-fw"></i> 
+	        </h3>
+	      </div>
+	      <div class="modal-footer">
+	      </div>
+	    </div>
+	  </div>
+	</div>
 @endsection
 @section('script')
 <script type="text/javascript">
@@ -83,8 +101,9 @@
 			data: {data: 1},
 		})
 		.done(function() {
-			$("#tr_"+valor).remove();
-			alert("Data subida con exito");
+			$("#modal").modal('show');
+			$('#btn_data_all').text('Cargado!');
+			location.reload(4000);
 		})
 		.fail(function() {
 			alert("Ocurrio un error! intente de nuevo");
