@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-05-2018 a las 23:50:20
+-- Tiempo de generación: 20-05-2018 a las 03:40:42
 -- Versión del servidor: 10.1.31-MariaDB
--- Versión de PHP: 7.1.15
+-- Versión de PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -875,10 +875,32 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `cedula`, `nombres`, `apellidos`, `usuario`, `password`, `sector_id`, `rol`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$ZxZSAmC87knOWH5M8y0bnu85IFhTgXiCnlG7os6f1ZGh2JQ99bA2S', '1', 'U', 'yDuUWXHYtoDpYhEd7GDY9IrcVwYGvENWmbY9EoyebEsr8hG8L4CM6khks5CN', '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
-(6, '20119485', 'luis', 'barrios', 'luis099224', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '6', 'U', 'M1LgyutVj58T4OtN8up9t0MS6Z0IpTqFQQTjYblJT9O3zyhCg2M31dvnAgf4', '2018-05-18 03:21:44', '2018-05-18 03:21:44'),
-(7, '20990397', 'francisco', 'hernandez', 'francisco', '$2y$10$WiPF6NHfCz5JXub/9kbiTuuFs3YBxp/4GBIyhN2dzVAUoouey.TJ6', '15', 'U', 'PT5NWh0o7Zyax4rsVpepPcAEGf0eNf3jbwVuP9Huyht1esv2YO28DXX6en1o', '2018-05-18 03:27:58', '2018-05-18 03:27:58'),
-(8, '12345678', 'mariangel', 'hernandez', 'mariangelh', '$2y$10$L7LxLiFskFqskWD/m9fzWuq1gFQFPr1QvH3oh6TvAKbAxS491fRpq', '25', 'A', 'PwE2tlE60sUWyZV79R5jRDHP6hlEcE698U3n4HfvlLrvoN1bnuSiFy0fxXUc', NULL, NULL);
+(1, '00000000', 'Admin', 'Admin', 'admin', '$2y$10$WiPF6NHfCz5JXub/9kbiTuuFs3YBxp/4GBIyhN2dzVAUoouey.TJ6', '25.', 'A', 'IAlRvkbpSb9TLfTZyKYHraAVwu7goVBvRIuJB2UkDtvjMQdsqOzN9mUBtT87', '2018-05-18 04:08:23', '2018-05-18 04:08:23'),
+(9, '12345678', 'salud', 'salud', 'salud', '$2y$10$.cSqBMxWKi2BiLeWQud2SufmzezzUJLQ1ADAFMfRXIOotkebdtfxu', '1', 'U', 'KWTmXGJWdoM8IRtdqDdh0bzV2mEjC8b0DKerHa7BkSA36UHeVhZriDLbIR4y', '2018-05-20 04:58:32', '2018-05-20 04:58:32'),
+(10, '12345678', 'mariangel', 'hernandez', 'data', '$2y$10$DtuvQubL2/HpxCnS96l.ruxeNPNF7z/OJXPL4gof1.XtoX0R0hypC', '25', 'C', NULL, NULL, NULL),
+(11, '12345678', 'vivienda', 'vivienda', 'vivienda', '$2y$10$CfvcwLN17amnmaz7pAGeNO7gFG6AzcPAHwgnlMv0eF5Dfqa4C1k0i', '2', 'U', NULL, '2018-05-20 05:22:07', '2018-05-20 05:22:07'),
+(12, '12345678', 'educacion', 'educacion', 'educacion', '$2y$10$VExPUmi7TuOUk2cqoZ42U.WV378LNn1NOAsihAeplCMI3lM1h8GfS', '3', 'U', NULL, '2018-05-20 05:24:16', '2018-05-20 05:24:16'),
+(13, '12345678', 'hogares', 'hogares', 'hogares', '$2y$10$SlB6upzTEcFHOeYXbUS.bul7d443aH2CdgTxNVsO9BFA7hTR/UcUS', '4', 'U', NULL, '2018-05-20 05:25:51', '2018-05-20 05:25:51'),
+(14, '12345678', 'frente', 'frente', 'frente', '$2y$10$wR6T2EkBjnOJ2gFPExCCI.sdUIZOQ1jr1pdq.RR01DJ3Wzb9kj9a.', '5', 'U', NULL, '2018-05-20 05:26:55', '2018-05-20 05:26:55'),
+(15, '12345678', 'chamba', 'chamba', 'chamba', '$2y$10$4B6Ijmg.RbhLFGP1Wd98eu/PF3IAlTOxoRMpXTeKRIrHuI1AiIWbO', '6', 'U', NULL, '2018-05-20 05:27:57', '2018-05-20 05:27:57'),
+(16, '12345678', 'transporte', 'transporte', 'transporte', '$2y$10$p4sToAdXb2lJLtDZ20ZQY.KNTN86Y7zoalYRxsoe1fgB1bRwzE39i', '7', 'U', NULL, '2018-05-20 05:29:33', '2018-05-20 05:29:33'),
+(17, '12345678', 'discapacidad', 'discapacidad', 'discapacidad', '$2y$10$Q26JKWBXphmSToSRPcpqGuafsjhPUIcLvPg0tdBRVfxre.O7S7VvW', '8', 'U', NULL, '2018-05-20 05:31:25', '2018-05-20 05:31:25'),
+(18, '12345678', 'adulto', 'adulto', 'adulto', '$2y$10$zZVN6lJy6TyC9U76PvqXeOQ80/JD1G5QjZXtJ8mWkkSjDeVjVKPue', '9', 'U', NULL, '2018-05-20 05:32:10', '2018-05-20 05:32:10'),
+(19, '12345678', 'motorizado', 'motorizado', 'motorizado', '$2y$10$OsFkZgXtJDDhNjfgYFLXVuhtZjnImp1.JJccAtU7aI46pNVtNrzvW', '10', 'U', NULL, '2018-05-20 05:33:36', '2018-05-20 05:33:36'),
+(20, '12345678', 'murales', 'murales', 'murales', '$2y$10$3bbEx.teH.I1c8S2uYP9Bu6Ggd3REdSUWYbxLfYKImqxSbyDvgsW.', '11', 'U', NULL, '2018-05-20 05:35:24', '2018-05-20 05:35:24'),
+(21, '12345678', 'francisco de miranda', 'francisco de miranda', 'fmiranda', '$2y$10$wQuJdFFd/4nrw6dmBSoxEOR/2fPODeGBKvw5g.h3CvI.NZMo7OFDW', '12', 'U', NULL, '2018-05-20 05:36:47', '2018-05-20 05:36:47'),
+(22, '12345678', 'robert serra', 'robert serra', 'robert', '$2y$10$U6SfMXLZxHfjDPy3PoUYMeo170/8S/eAxZIou96X1W4nZjiCjPn3.', '13', 'U', NULL, '2018-05-20 05:37:36', '2018-05-20 05:37:36'),
+(23, '12345678', 'trabajadores', 'trabajadores', 'trabajador', '$2y$10$AvgCQroj6bXuRKQhIi.O6e9Lk.7aPfn7l4bd3s7sfplcqRGPhIlfm', '14', 'U', NULL, '2018-05-20 05:38:22', '2018-05-20 05:38:22'),
+(24, '12345678', 'consejo', 'consejo', 'consejo', '$2y$10$sZ1yQOZJtBERbfCGKVeHPexRNhc390Pzpg031frVabM2YGmWy.rz2', '15', 'U', NULL, '2018-05-20 05:40:33', '2018-05-20 05:40:33'),
+(25, '12345678', 'campesinos', 'campesinos', 'campesino', '$2y$10$3X2Kj7tT1cFHuCRFJFLiY.LCAk0DwHqKTdYdxapZzpHcvhyU4g3gi', '16', 'U', NULL, '2018-05-20 05:43:04', '2018-05-20 05:43:04'),
+(26, '12345678', 'refugiados', 'refugiados', 'refugiados', '$2y$10$ngsuQ7TqLh8KdlTIKaVvueqC6F8CeCV/maxsg7pEzB1/XqSY6ghIW', '17', 'U', NULL, '2018-05-20 05:44:32', '2018-05-20 05:44:32'),
+(27, '12345678', 'indigenas', 'indigenas', 'indigenas', '$2y$10$gQ7nUUl6PBE5wT/EOyfpXO2m91Kdr6oysCiiAtk9ZbzoPZkP4l0x2', '18', 'U', NULL, '2018-05-20 05:45:36', '2018-05-20 05:45:36'),
+(28, '12345678', 'estudiantes', 'estudiantes', 'estudiantes', '$2y$10$QNtq57D98F/o1J5.fhl/R.IkfPPsEiZL.VHSYo/bhfmXfoMnoA5C2', '19', 'U', NULL, '2018-05-20 05:47:06', '2018-05-20 05:47:06'),
+(29, '12345678', 'ecosocialista', 'ecosocialista', 'ecosocialista', '$2y$10$B3H6cp9N05.Q8X5eBKpsnep3B3j/Jn2z2ebku0SdNg/2x8PFdLwl2', '20', 'U', NULL, '2018-05-20 05:48:11', '2018-05-20 05:48:11'),
+(30, '12345678', 'abogados', 'abogados', 'abogados', '$2y$10$Dj2HkjPH/SEyjP2U0BNaOOKOfWBOSTe8xlh/tXL5IkbPh1AKoARHK', '21', 'U', 'AnbtMAceuTw44fnsVxLFW39FlH7MU5NvhPvpIOTgr2yX0PeZToLGDoQHlVzK', '2018-05-20 05:48:52', '2018-05-20 05:48:52'),
+(31, '12345678', 'eco social', 'eco social', 'ecosocial', '$2y$10$fGMVDeTENinx69wo45LvJ.hBuGuU2KUj1YpBNLY8v66mHV3ai1BWq', '22', 'U', NULL, '2018-05-20 05:50:04', '2018-05-20 05:50:04'),
+(32, '12345678', 'gloria', 'gloria', 'gloriad', '$2y$10$9xkh5OwxxbMPZqklknzF9O.NHZr1qWcsy3qNVbZ1gsyNYdehU9zTe', '23', 'U', NULL, '2018-05-20 05:50:58', '2018-05-20 05:50:58'),
+(33, '12345678', 'instituciones', 'instituciones', 'instituciones', '$2y$10$8NiYPrWjDz5s3j7CZG/GQ.bJcr9NEDVeVQU74DZFAdZ3ujuBU7x4u', '24', 'U', NULL, '2018-05-20 05:51:46', '2018-05-20 05:51:46');
 
 --
 -- Índices para tablas volcadas
@@ -935,7 +957,7 @@ ALTER TABLE `centros`
 -- AUTO_INCREMENT de la tabla `datos_sala`
 --
 ALTER TABLE `datos_sala`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -947,7 +969,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

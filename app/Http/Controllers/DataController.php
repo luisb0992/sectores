@@ -164,5 +164,22 @@ class DataController extends Controller
         return response()->json($data);
     }
 
+    public function dataDelete(){
+        
+        $data = DatoSala::where('status', 1)->get();
+
+        return view('data.eliminar',[
+            'data' => $data
+        ]);
+    }
+
+    public function deleteData(Request $request){
+
+        $data = DatoSala::findOrFail($request->valor);
+        $data->delete();
+
+        return response()->json($data);
+    }
+
 
 }
