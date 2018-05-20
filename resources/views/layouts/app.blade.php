@@ -168,6 +168,12 @@
                 <i class="fa fa-plus-square"></i> <span>Graficos Sectores</span>
               </a>
             </li>
+
+            <li>
+              <a href="{{route('municipio.grafico')}}">
+                <i class="fa fa-plus-square"></i> <span>Graficos Municipios</span>
+              </a>
+            </li>
             
             @endif       
           </ul>
