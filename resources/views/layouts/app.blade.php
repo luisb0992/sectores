@@ -104,6 +104,11 @@
                 <i class="fa fa-plus-square"></i> <span>Cargar Sectores</span>
               </a>
             </li>
+            <li>
+              <a href="{{ route('verDataCargada') }}">
+                <i class="fa fa-plus-square"></i> <span>Ver datos cargados</span>
+              </a>
+            </li>
             @endif
 
             @if(\Auth::user()->rol == 'C')

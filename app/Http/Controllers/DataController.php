@@ -177,7 +177,7 @@ class DataController extends Controller
     public function allData(){
 
         $data = DatoSala::where('status', 0)->update(['status' => 1]);
-        
+
         $bit = new Bitacora;
         $bit->usuario = \Auth::user()->usuario;
         $bit->proceso = 'Subio un total de '. $data . ' reportes restantes';
@@ -212,6 +212,14 @@ class DataController extends Controller
         $data->delete();
 
         return response()->json($data);
+    }
+
+    // data cargada por usuario
+    public function verDataCargada(){
+
+        return view('data.ver',[
+            'data' => DatoSala::where('sector_id', \Auth::user()->sector_id)->get()
+        ]);
     }
 
 
